@@ -1,23 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noteshop</title>
+    <meta name="description" content="Jednoduché osobní portfolio Vojty.">
+    <title>Vojta | Moje portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Noteshop</h1>
-    <h3>Prodej nejlevnějších a nejlepších notebooků</h3>
-    <h3>Proč zrovna notebook?</h3>
-    </ul>
-         <li>Jsou levnější</li>
-         <li>Jsou přenosnější</li>
-         <li>Jsou praktičtější</li>
-</ul>
-<h2>Momentálně výhodné nabídky:</h2>
-<h3>Lenovo LOQ 15irx10</h3>
-<a href="https://www.alza.cz/lenovo-loq-15irx10-luna-grey-d13114467.htm">Klikněte sem</a>
-<img src="https://image.alza.cz/products/NT379x144/NT379x144.jpg?width=800&height=800" alt="1">
+    <header class="site-header" id="domu">
+        <nav class="nav container" aria-label="Hlavní navigace">
+            <a class="logo" href="#domu">vojta<span>.</span></a>
+            <div class="nav-links">
+                <a href="#domu">Domů</a>
+                <a href="#o-mne">O mně</a>
+                <a href="#dovednosti">Dovednosti</a>
+                <a href="#projekty">Projekty</a>
+                <a href="#kontakt">Kontakt</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="status-dot"></span> STUDENT A ZAČÍNAJÍCÍ TVŮRCE</p>
+                <h1 id="hero-title">Ahoj, jsem <span>Vojta.</span><br>Vítej na mém portfoliu.</h1>
+                <p class="hero-text">Zajímám se o IT, počítače a nové technologie. Právě se učím tvořit weby a zkouším, co všechno se dá naprogramovat.</p>
+                <a class="button" href="#projekty">Moje projekty <span aria-hidden="true">&darr;</span></a>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <div class="hero-mark">&lt; / &gt;</div>
+                <span class="hero-caption">učím se něco nového</span>
+            </div>
+        </section>
+
+        <section class="section container" id="o-mne" aria-labelledby="about-title">
+            <div class="section-heading">
+                <p class="eyebrow">PÁR SLOV O MNĚ</p>
+                <h2 id="about-title">O mně</h2>
+            </div>
+            <div class="about-layout">
+                <div class="about-photo" role="img" aria-label="Místo pro moji fotografii">
+                    <span>V</span>
+                    <p>Sem můžeš přidat svoji fotku</p>
+                </div>
+                <div class="about-copy">
+                    <h3>Počítače mě baví už dlouho.</h3>
+                    <p>Jsem student a ve volném čase rád hraju hry a zkoumám, jak fungují různé technologie. Zajímá mě programování a taky cybersecurity.</p>
+                    <p>Teď se učím základy HTML a CSS. Zatím zkouším jednoduché stránky a postupně se učím, jak je udělat přehledné a hezké.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-tint" id="dovednosti" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">CO SE UČÍM</p>
+                    <h2 id="skills-title">Dovednosti a zájmy</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill"><span class="skill-number">01</span><h3>HTML</h3><p>Základy tvorby webových stránek</p></div>
+                    <div class="skill"><span class="skill-number">02</span><h3>CSS</h3><p>Zkouším upravovat vzhled stránek</p></div>
+                    <div class="skill"><span class="skill-number">03</span><h3>JavaScript</h3><p>Zatím jen úplné základy</p></div>
+                    <div class="skill"><span class="skill-number">04</span><h3>Práce s PC</h3><p>Každodenní práce a objevování</p></div>
+                    <div class="skill"><span class="skill-number">05</span><h3>Cybersecurity</h3><p>Zájem o bezpečnost na internetu</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container" id="projekty" aria-labelledby="projects-title">
+            <div class="section-heading project-heading">
+                <div>
+                    <p class="eyebrow">MALÉ VĚCI, KTERÉ JSEM VYTVOŘIL</p>
+                    <h2 id="projects-title">Moje projekty</h2>
+                </div>
+                <p class="heading-note">Ukázky, které budu postupně doplňovat.</p>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image image-one" aria-hidden="true"><span>01</span></div>
+                    <div class="project-info"><p class="project-type">PRVNÍ POKUS</p><h3>Moje první webová stránka</h3><p>Jednoduchá stránka, na které jsem si vyzkoušel HTML.</p><div class="tags"><span>HTML</span><span>CSS</span></div></div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image image-two" aria-hidden="true"><span>02</span></div>
+                    <div class="project-info"><p class="project-type">O MNĚ</p><h3>About Me stránka</h3><p>Krátké představení a pár věcí, které mě baví.</p><div class="tags"><span>HTML</span><span>CSS</span></div></div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image image-three" aria-hidden="true"><span>03</span></div>
+                    <div class="project-info"><p class="project-type">DO ŠKOLY</p><h3>Školní HTML projekt</h3><p>Prostor pro další projekt, který vytvořím ve škole.</p><div class="tags"><span>HTML</span><span>CSS</span></div></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section" id="kontakt" aria-labelledby="contact-title">
+            <div class="container contact-layout">
+                <div>
+                    <p class="eyebrow">NAPIŠ MI</p>
+                    <h2 id="contact-title">Kontakt</h2>
+                    <p class="contact-intro">Máš otázku nebo si chceš popovídat o technologiích? Tady mě najdeš.</p>
+                </div>
+                <div class="contact-links">
+                    <div class="contact-row"><span>E-mail</span><strong>doplním</strong><span class="contact-hint">e-mailová adresa</span></div>
+                    <div class="contact-row"><span>Discord</span><strong>doplním</strong><span class="contact-hint">uživatelské jméno</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <a class="logo" href="#domu">vojta<span>.</span></a>
+            <p>© 2026 Vojta | Školní portfolio</p>
+            <div class="footer-meta">
+                <div class="validation-links" aria-label="Validátory kódu">
+                    <a href="https://validator.w3.org/nu/" target="_blank" rel="noopener noreferrer" aria-label="Otevřít validátor HTML">
+                        <span class="validation-icon" aria-hidden="true">&#10003;</span> HTML
+                    </a>
+                    <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener noreferrer" aria-label="Otevřít validátor CSS">
+                        <span class="validation-icon" aria-hidden="true">&#10003;</span> CSS
+                    </a>
+                </div>
+                <div class="ai-citation">
+                    <h2>Citace AI</h2>
+                    <p>Microsoft. (bez data). <cite>GitHub Copilot</cite> [generativní AI]. Použito při návrhu a úpravě HTML, CSS a textů tohoto portfolia dne 9. října 2026.</p>
+                    <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">https://github.com/features/copilot</a>
+                    <p class="citation-note">Konkrétní model nebyl v této relaci uveden.</p>
+                </div>
+            </div>
+            <a class="back-top" href="#domu">Zpět nahoru ↑</a>
+        </div>
+    </footer>
 </body>
 </html>
