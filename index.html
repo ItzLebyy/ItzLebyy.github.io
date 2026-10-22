@@ -8,6 +8,8 @@
     <title>Vojta — můj kousek internetu</title>
     <link rel="icon" type="image/svg+xml" href="assets/vojta-mark.svg">
     <link rel="stylesheet" href="assets/pixel-theme.css">
+    <link rel="stylesheet" href="assets/eastereggs.css">
+    <script src="assets/eastereggs.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,11 +17,12 @@
     <a class="skip-link" href="#obsah">Přejít na obsah</a>
     <header class="site-header" id="domu">
         <nav class="nav container" aria-label="Hlavní navigace">
-            <a class="logo" href="#domu" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" width="34" height="34" alt=""><span><span class="dotted-j">j</span>ta<span class="logo-dot">.</span></span></a>
+            <a class="logo" href="#domu" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" data-secret-src="assets/vojta-mark-night.svg" width="34" height="34" alt=""><span><span class="dotted-j">j</span>ta<span class="logo-dot">.</span></span></a>
             <div class="nav-links">
                 <a href="#o-mne">O mně</a>
                 <a href="#projekty">Projekty <span class="nav-count">03</span></a>
                 <a href="#dovednosti">Co se učím</a>
+                <a href="#herna">Herna</a>
             </div>
             <a class="nav-contact" href="#kontakt">Napiš mi <span aria-hidden="true">↗</span></a>
         </nav>
@@ -39,9 +42,8 @@
             </div>
 
             <div class="hero-art" aria-hidden="true">
-                <div class="art-topline"><span>vojta / pokoj</span><span class="window-controls">─ □ ×</span></div>
-                <img class="computer pixel-art" src="assets/pixel-desk.svg" width="512" height="448" alt="">
-                <span class="wip-sticker">WORK IN PROGRESS <span class="terminal-cursor">_</span></span>
+                <div class="art-topline"><span>vojta.exe / pokoj</span><span class="window-controls">─ □ ×</span></div>
+                <img class="computer pixel-art" src="assets/pixel-room.webp" width="1341" height="1173" fetchpriority="high" alt="">
                 <div class="art-bottomline"><span>trocha kódu, hodně pokusů</span><span>[ ctrl + s ]</span></div>
             </div>
         </section>
@@ -55,26 +57,39 @@
                 <a class="project-card project-featured" href="projects/googlesearch/index.html">
                     <div class="project-image image-google">
                         <div class="mini-browser-bar" aria-hidden="true"><span>● ● ●</span><span>GoonOnTheGo / můj pokus</span><span>↗</span></div>
-                        <img src="projects/googlesearch/preview.svg" alt="Náhled mého vyhledávače GoonOnTheGo" width="800" height="360" loading="lazy">
+                        <img src="projects/googlesearch/preview.svg" data-secret-src="projects/googlesearch/preview-night.svg" alt="Náhled mého vyhledávače GoonOnTheGo" width="800" height="360" loading="lazy">
                         <span class="preview-label">KLIKNI A VYZKOUŠEJ ↗</span>
                     </div>
                     <div class="project-info"><div><p class="project-type">01 / VYHLEDÁVÁNÍ</p><h3><span class="syntax-blue">Goon</span><span class="syntax-pink">On</span><span class="syntax-yellow">The</span><span class="syntax-purple">Go</span> Search</h3><p>Můj pokus o známý vyhledávač. Včetně obrázků a rozšířeného hledání.</p><div class="tags"><span class="syntax-pink">HTML</span><span class="syntax-blue">CSS</span></div></div><span class="project-arrow" aria-hidden="true">↗</span></div>
                 </a>
                 <div class="project-stack">
                     <a class="project-card project-small" href="#domu">
-                        <div class="small-project-art first-web" aria-hidden="true"><img class="pixel-art" src="assets/pixel-terminal.svg" width="72" height="63" alt=""><span class="art-label">hello, world.</span></div>
+                        <div class="small-project-art first-web" aria-hidden="true"><img class="pixel-art" src="assets/pixel-terminal.svg" data-secret-src="assets/pixel-terminal-night.svg" width="72" height="63" alt=""><span class="art-label">hello, world.</span></div>
                         <div class="project-info"><div><p class="project-type">02 / PRVNÍ POKUS</p><h3>Moje první stránka</h3><p>Tady to začalo. HTML, CSS a spousta zkoušení.</p><div class="tags"><span class="syntax-pink">HTML</span><span class="syntax-blue">CSS</span><span>Tento web</span></div></div><span class="project-arrow" aria-hidden="true">↗</span></div>
                     </a>
                     <a class="project-card project-small" href="#o-mne">
-                        <div class="small-project-art about-art" aria-hidden="true"><img class="pixel-art" src="assets/pixel-gamepad.svg" width="80" height="60" alt=""><span class="art-label">a little about me</span></div>
+                        <div class="small-project-art about-art" aria-hidden="true"><img class="pixel-art" src="assets/pixel-gamepad.svg" data-secret-src="assets/pixel-gamepad-night.svg" width="80" height="60" alt=""><span class="art-label">a little about me</span></div>
                         <div class="project-info"><div><p class="project-type">03 / NĚCO OSOBNÍHO</p><h3>About me</h3><p>Pár slov o mně a o tom, co mě baví.</p><div class="tags"><span class="syntax-pink">HTML</span><span>Součást portfolia</span></div></div><span class="project-arrow" aria-hidden="true">↗</span></div>
                     </a>
                 </div>
             </div>
         </section>
+        <section class="arcade-teaser container" id="herna" aria-labelledby="arcade-title">
+            <div class="arcade-invite">
+                <img class="pixel-art arcade-invite-art" src="assets/pixel-cards.svg" data-secret-src="assets/pixel-cards-night.svg" width="96" height="72" alt="">
+                <div class="arcade-invite-copy">
+                    <p class="eyebrow">BONUS / PAUZA OD KÓDU</p>
+                    <h2 id="arcade-title">Ještě jeden <span class="syntax-pink">pokus?</span></h2>
+                    <p>Malá herna pro chvíle, kdy si kód zaslouží pauzu.</p>
+                    <div class="arcade-shortcuts"><a href="projects/arcade/index.html#blackjack">♠ Blackjack</a><a href="projects/arcade/index.html#snake">▰ Snake</a><a href="projects/arcade/index.html#reaction">ϟ Postřeh</a></div>
+                </div>
+                <a class="button" href="projects/arcade/index.html">Otevřít hernu <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
         <section class="about-section" id="o-mne" aria-labelledby="about-title">
             <div class="container about-layout">
-                <div class="about-copy"><p class="eyebrow">02 / ZA TÍM WEBEM</p><h2 id="about-title">Prostě kluk,<br>kterého baví <span class="accent-word">IT.</span></h2><p>Jsem Vojta, student, který rád hraje hry a zkoumá, jak fungují počítače. Když mě něco zaujme, chci si to vyzkoušet sám.</p><p>Teď objevuju <span class="syntax-pink">HTML</span> a <span class="syntax-blue">CSS</span>, trochu <span class="syntax-yellow">JavaScriptu</span> a zajímá mě i <span class="syntax-purple">cybersecurity</span>. Občas se něco rozbije. Pak hledám proč. I to k tomu patří.</p><div class="about-signature"><span aria-hidden="true">&gt;_</span> Vo<span class="dotted-j">j</span>ta</div></div>
+                <div class="about-copy"><p class="eyebrow">02 / ZA TÍM WEBEM</p><h2 id="about-title">Prostě kluk,<br>kterého baví <span class="accent-word">IT.</span></h2><p>Jsem Vojta, student, který rád hraje hry a zkoumá, jak fungují počítače. Když mě něco zaujme, chci si to vyzkoušet sám.</p><p>Teď objevuju <span class="syntax-pink">HTML</span> a <span class="syntax-blue">CSS</span>, trochu <span class="syntax-yellow">JavaScriptu</span> a zajímá mě i <span class="syntax-purple">cybersecurity</span>. Občas se něco rozbije. Pak hledám proč. I to k tomu patří.</p><div class="about-signature"><span aria-hidden="true">&gt;_</span> <span class="signature-name">Vo<span class="dotted-j">j</span>ta</span></div></div>
                 <div class="learning-panel" id="dovednosti" role="region" aria-labelledby="skills-title">
                     <div class="learning-header"><p class="eyebrow">PRÁVĚ OTEVŘENÉ ZÁLOŽKY</p><span aria-hidden="true">↙</span></div>
                     <h3 id="skills-title">Co se teď učím</h3>
@@ -107,7 +122,7 @@
     </main>
 
     <footer class="footer container">
-        <div class="footer-main"><a class="logo" href="#domu" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" width="34" height="34" alt=""><span><span class="dotted-j">j</span>ta<span class="logo-dot">.</span></span></a><p>Vytvořeno z nadšení. A pár pokusů navíc.</p><a class="back-top" href="#domu">Zpátky nahoru ↑</a></div>
+        <div class="footer-main"><a class="logo" href="#domu" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" data-secret-src="assets/vojta-mark-night.svg" width="34" height="34" alt=""><span><span class="dotted-j">j</span>ta<span class="logo-dot">.</span></span></a><p>Vytvořeno z nadšení. A pár pokusů navíc.</p><a class="back-top" href="#domu">Zpátky nahoru ↑</a></div>
         <div class="footer-bottom"><p>© 2026 Vojta · Školní portfolio</p><div class="footer-meta"><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fitzlebyy.github.io%2F" target="_blank" rel="noopener noreferrer" aria-label="Otevřít validátor HTML">HTML ↗</a><a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fitzlebyy.github.io%2F&amp;profile=css3svg&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en" target="_blank" rel="noopener noreferrer" aria-label="Otevřít validátor CSS">CSS ↗</a><a href="CITACE-AI.md">Citace AI ↗</a></div><div class="palette" role="img" aria-label="Barevná paleta: šedá olivová, popelavá šedá a čajová zelená"><span></span><span></span><span></span></div></div>
     </footer>
     <script>
@@ -219,6 +234,7 @@
             window.addEventListener("touchstart", stopScroll, { passive: true });
             window.addEventListener("pointerdown", stopScroll, { passive: true });
             window.addEventListener("popstate", stopScroll);
+            window.addEventListener("vojta:gameopen", stopScroll);
             window.addEventListener("keydown", (event) => {
                 if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " ", "Escape", "Tab"].includes(event.key)) {
                     stopScroll();

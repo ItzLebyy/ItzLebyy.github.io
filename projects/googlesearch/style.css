@@ -1,5 +1,5 @@
 /* Search experiment, in the same pixel world as the portfolio. */
-nav { width: min(1180px, calc(100% - 64px)); min-height: 90px; margin-inline: auto; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 12px 28px; padding-block: 20px; border-bottom: 2px solid #40553b; }
+nav { width: min(1180px, calc(100% - 64px)); min-height: 90px; margin-inline: auto; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 12px 28px; padding-block: 20px; border-bottom: 2px solid var(--border-soft); }
 nav a { font: 500 18px/1.5 var(--pixel); }
 nav a:hover { color: var(--tea); text-decoration: underline; text-underline-offset: 5px; }
 .portfolio-return { margin-right: auto; color: var(--tea); }
@@ -19,8 +19,8 @@ nav a:hover { color: var(--tea); text-decoration: underline; text-underline-offs
 .search-box:hover { border-color: var(--ash); }
 .search-box:focus-visible { border-color: var(--tea); outline: 2px solid var(--tea); outline-offset: 3px; }
 .buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 28px; }
-.buttons button, .advanced-button button { padding: 10px 17px; border: 2px solid var(--tea); border-radius: 0; background: var(--tea); color: var(--ink); cursor: pointer; font: 500 18px/1.4 var(--pixel); box-shadow: 4px 4px 0 var(--shadow), inset -3px -3px 0 #9caf8c; transition: transform .15s, box-shadow .15s; }
-.buttons button:hover, .advanced-button button:hover { transform: translate(-1px, -2px); box-shadow: 5px 6px 0 var(--shadow), inset -3px -3px 0 #9caf8c; }
+.buttons button, .advanced-button button { padding: 10px 17px; border: 2px solid var(--tea); border-radius: 0; background: var(--tea); color: var(--ink); cursor: pointer; font: 500 18px/1.4 var(--pixel); box-shadow: 4px 4px 0 var(--shadow), inset -3px -3px 0 var(--button-shade); transition: transform .15s, box-shadow .15s; }
+.buttons button:hover, .advanced-button button:hover { transform: translate(-1px, -2px); box-shadow: 5px 6px 0 var(--shadow), inset -3px -3px 0 var(--button-shade); }
 .buttons button:active, .advanced-button button:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--shadow); }
 .buttons button:last-child:not(:first-child) { border-color: var(--line); background: var(--surface); color: var(--text); box-shadow: 4px 4px 0 var(--shadow); }
 .advanced-title { width: min(820px, calc(100% - 64px)); margin: 44px auto 0; color: var(--tea); font: 500 38px/1.2 var(--pixel); }

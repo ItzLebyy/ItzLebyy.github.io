@@ -19,6 +19,7 @@ Při práci se vycházelo z existujícího portfolia a již přidaného projektu
 - **Kontakty:** zobrazení údajů dodaných autorem, kopírování e-mailových adres a Discord jména po kliknutí a potvrzení výsledku kopírování.
 - **Průběh čtení:** horní ukazatel posunutí stránky s plynulým pohybem a skrytí výchozího posuvníku.
 - **Projekty:** prezentace projektů a odkaz na existující stránku GoonOnTheGo Search včetně jejího náhledu.
+- **Herna:** blackjack, Snake a test postřehu včetně pravidel, ovládání, ukládání rekordů v prohlížeči a skrytých interaktivních překvapení.
 - **Dokumentace:** příprava a úprava této citace použití AI.
 
 ## Role autora

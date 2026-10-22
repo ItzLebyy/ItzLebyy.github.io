@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1c2a20">
+    <meta name="description" content="Vojtova malá pixelová herna. Blackjack, Snake a test postřehu přímo v prohlížeči.">
+    <title>Pixelová herna | Vojta</title>
+    <link rel="icon" href="../../assets/vojta-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../assets/pixel-theme.css">
+    <link rel="stylesheet" href="../../assets/eastereggs.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../../assets/eastereggs.js" defer></script>
+    <script src="core.js" defer></script>
+    <script src="arcade.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#arcade">Přejít ke hrám</a>
+    <header class="arcade-header wrap">
+        <a class="return-link" href="../../index.html#herna">← zpátky k Vo<span class="dotted-j">j</span>tovi</a>
+        <button class="robot-button" type="button" data-secret-robot aria-label="Robot"><img src="../../assets/vojta-mark.svg" data-secret-src="../../assets/vojta-mark-night.svg" width="42" height="42" alt=""></button>
+    </header>
+    <main class="wrap" id="arcade">
+        <div class="arcade-intro">
+            <p class="eyebrow">BONUS LEVEL / PAUZA OD KÓDU</p>
+            <h1>Malá pixelová <span class="syntax-pink">herna.</span></h1>
+            <p>Tři malé hry. Ještě jeden pokus?</p>
+        </div>
+        <noscript><p class="notice">Pro hraní je potřeba povolit JavaScript v prohlížeči.</p></noscript>
+        <div class="arcade-machine">
+            <div class="machine-bar"><span>vojta / arcade.exe</span><span aria-hidden="true">─ □ ×</span></div>
+            <div class="game-tabs" role="tablist" aria-label="Vyber hru">
+                <button id="tab-blackjack" type="button" role="tab" aria-selected="true" aria-controls="panel-blackjack" data-game="blackjack"><span aria-hidden="true">♠</span> Blackjack</button>
+                <button id="tab-snake" type="button" role="tab" aria-selected="false" aria-controls="panel-snake" tabindex="-1" data-game="snake"><span aria-hidden="true">▰</span> Snake</button>
+                <button id="tab-reaction" type="button" role="tab" aria-selected="false" aria-controls="panel-reaction" tabindex="-1" data-game="reaction"><span aria-hidden="true">ϟ</span> Postřeh</button>
+            </div>
+
+            <section id="panel-blackjack" class="game-panel" role="tabpanel" aria-labelledby="tab-blackjack">
+                <div class="game-layout">
+                    <div class="game-stage blackjack-stage">
+                        <div class="table-topline"><span>ČERSTVĚ ZAMÍCHÁNO</span><div class="deck-shoe" id="card-deck" aria-hidden="true">&gt;_</div></div>
+                        <div class="table-hand"><div class="hand-label"><h2>Dealer</h2><span id="dealer-total">—</span></div><div id="dealer-cards" class="cards-row" aria-label="Karty dealera"></div></div>
+                        <div class="table-divider"><span aria-hidden="true">♠ ♥ ♣ ♦</span><span>BLACKJACK / 21</span></div>
+                        <div class="table-hand"><div class="hand-label"><h2>Ty</h2><span id="player-total">—</span></div><div id="player-cards" class="cards-row" aria-label="Tvoje karty"></div></div>
+                        <p id="blackjack-status" class="game-status" role="status" aria-atomic="true">Rozdej karty a zkus porazit dealera.</p>
+                        <div class="game-actions"><button id="deal" class="pixel-button" type="button">Rozdat karty ↗</button><button id="hit" class="pixel-button secondary" type="button" disabled>Další kartu</button><button id="stand" class="pixel-button secondary" type="button" disabled>Zůstat</button></div>
+                    </div>
+                    <aside class="game-guide">
+                        <p class="eyebrow syntax-purple">01 / KARETNÍ KLASIKA</p><h2>Co nejblíž <span class="syntax-yellow">21.</span></h2>
+                        <p>Vyšší součet než dealer vyhrává. Přes 21? Kolo je jeho.</p>
+                        <ul><li>Figury mají hodnotu 10.</li><li>Eso je 1 nebo 11, podle ruky.</li><li>Blackjack je 21 z prvních dvou karet.</li><li>Dealer bere do 16 a stojí na každé 17.</li></ul>
+                        <div class="stats-grid"><div><span id="blackjack-wins">0</span><small>výhry</small></div><div><span id="blackjack-losses">0</span><small>prohry</small></div><div><span id="blackjack-pushes">0</span><small>remízy</small></div></div>
+                        <p class="guide-footnote">Každé kolo začíná novým zamíchaným balíčkem.</p>
+                    </aside>
+                </div>
+            </section>
+
+            <section id="panel-snake" class="game-panel" role="tabpanel" aria-labelledby="tab-snake" hidden>
+                <div class="game-layout">
+                    <div class="game-stage snake-stage">
+                        <div class="snake-hud"><span>SKÓRE <strong id="snake-score">0</strong></span><span>REKORD <strong id="snake-best">0</strong></span></div>
+                        <canvas id="snake-board" width="360" height="360" tabindex="0" aria-label="Herní plocha Snake. Po spuštění ovládej šipkami nebo W A S D, mezerník pozastaví hru.">Snake: ovládej šipkami nebo tlačítky pod herní plochou.</canvas>
+                        <p id="snake-status" class="game-status" role="status" aria-atomic="true">Posbírej růžové pixely. Hlavně si nekousni do ocasu.</p>
+                        <div class="game-actions"><button id="snake-start" class="pixel-button" type="button">Spustit hru ↗</button><button id="snake-pause" class="pixel-button secondary" type="button" disabled>Pauza</button></div>
+                        <div class="d-pad" role="group" aria-label="Směr hada"><button type="button" data-direction="up" aria-label="Nahoru">↑</button><button type="button" data-direction="left" aria-label="Doleva">←</button><button type="button" data-direction="down" aria-label="Dolů">↓</button><button type="button" data-direction="right" aria-label="Doprava">→</button></div>
+                    </div>
+                    <aside class="game-guide"><p class="eyebrow syntax-blue">02 / JEŠTĚ JEDEN PIXEL</p><h2>Malý had.<br><span class="syntax-mint">Velký hlad.</span></h2><p>Každé sousto tě prodlouží a trochu zrychlí. Zeď ani vlastní tělo tě nepropustí.</p><ul><li>Šipky nebo W A S D = pohyb.</li><li>Mezerník = pauza.</li><li>Na mobilu použij tlačítka dole.</li></ul><p class="guide-footnote">Při přepnutí hry nebo opuštění záložky se had pozastaví.</p></aside>
+                </div>
+            </section>
+
+            <section id="panel-reaction" class="game-panel" role="tabpanel" aria-labelledby="tab-reaction" hidden>
+                <div class="game-layout">
+                    <div class="game-stage reaction-stage">
+                        <div class="reaction-hud"><span>POSLEDNÍ <strong id="reaction-last">—</strong></span><span>REKORD <strong id="reaction-best">—</strong></span></div>
+                        <button id="reaction-pad" class="reaction-pad" type="button" data-state="idle"><span class="reaction-symbol" aria-hidden="true">ϟ</span><span id="reaction-instruction">Klikni pro start</span><small id="reaction-detail">Počkej na zelenou. Pak co nejrychleji klikni.</small></button>
+                        <p id="reaction-status" class="game-status" role="status" aria-atomic="true">Můžeš použít i Enter nebo mezerník.</p>
+                        <div class="recent-results"><span>POSLEDNÍ POKUSY</span><ol id="reaction-history"><li>Zatím žádný pokus.</li></ol></div>
+                    </div>
+                    <aside class="game-guide"><p class="eyebrow syntax-pink">03 / RYCHLEJŠÍ NEŽ MYŠLENKA</p><h2>Jaký máš<br><span class="syntax-pink">postřeh?</span></h2><p>Spusť pokus, počkej, až se plocha změní na zelenou, a klikni. Čím méně milisekund, tím lépe.</p><ul><li>Růžová = ještě čekej.</li><li>Zelená = teď!</li><li>Předčasný klik se nepočítá.</li></ul><p class="guide-footnote">Po každém výsledku můžeš rovnou začít další pokus.</p></aside>
+                </div>
+            </section>
+            <div class="machine-footer"><span>REKORDY SE UKLÁDAJÍ V TOMHLE PROHLÍŽEČI</span><span>TAJEMSTVÍ <strong data-secret-count>0</strong> / 3</span></div>
+        </div>
+        <details class="secret-hint"><summary>Něco tu nehraje…</summary><p>Robot si rád povídá, někdy stačí trochu vytrvalosti. A některé slovo umí rozjet párty.</p></details>
+    </main>
+    <footer class="arcade-footer wrap"><a href="../../index.html#herna">← zpátky na portfolio</a><span>Vytvořeno pro radost ze hry.</span><a href="../../CITACE-AI.md">Citace AI ↗</a></footer>
+</body>
+</html>

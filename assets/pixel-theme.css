@@ -19,6 +19,22 @@
     --line: #607358;
     --shadow: #101c15;
     --ink: #203024;
+    --panel-inset: #243728;
+    --panel-art: #34482e;
+    --border-soft: #40553b;
+    --border-tag: #708466;
+    --button-shade: #9caf8c;
+    --game-stage: #203426;
+    --game-guide: #263829;
+    --card-back: #40593e;
+    --card-face: #e5edda;
+    --card-edge: #bac9aa;
+    --card-ink: #263829;
+    --card-red: #94465f;
+    --board-background: #17281e;
+    --board-cell: #203426;
+    --board-overlay: #17281ed9;
+    --landscape-image: url("pixel-landscape.svg");
     --syntax-pink: #f4a7cf;
     --syntax-blue: #a9d6f5;
     --syntax-yellow: #f1d58a;
@@ -46,12 +62,24 @@ body::before {
     inset: auto 0 0;
     height: min(30vw, 360px);
     z-index: -1;
-    background: url("pixel-landscape.svg") center bottom / max(100%, 1200px) auto no-repeat;
+    background: var(--landscape-image) center bottom / max(100%, 1200px) auto no-repeat;
     opacity: .55;
     pointer-events: none;
     image-rendering: pixelated;
 }
 a { color: inherit; text-decoration: none; }
+/* A quiet pixel sky behind the content and the existing forest silhouette. */
+.pixel-sky { position: fixed; inset: 0; z-index: -2; overflow: hidden; pointer-events: none; user-select: none; }
+.sky-moon { position: absolute; top: 116px; right: clamp(20px, 2.6vw, 52px); width: clamp(38px, 4vw, 56px); aspect-ratio: 1; background: var(--syntax-yellow); opacity: .75; clip-path: polygon(40% 0, 70% 0, 70% 10%, 60% 10%, 60% 20%, 50% 20%, 50% 40%, 60% 40%, 60% 50%, 70% 50%, 70% 60%, 90% 60%, 90% 50%, 100% 50%, 100% 70%, 90% 70%, 90% 80%, 80% 80%, 80% 90%, 60% 90%, 60% 100%, 40% 100%, 40% 90%, 20% 90%, 20% 80%, 10% 80%, 10% 70%, 0 70%, 0 30%, 10% 30%, 10% 20%, 20% 20%, 20% 10%, 40% 10%); }
+.shooting-star { position: absolute; top: var(--star-top); left: var(--star-left); width: 5px; height: 5px; background: var(--syntax-yellow); opacity: 0; box-shadow: 6px -6px 0 var(--ash), 12px -12px 0 color-mix(in srgb, var(--ash) 80%, transparent), 18px -18px 0 color-mix(in srgb, var(--ash) 65%, transparent), 24px -24px 0 color-mix(in srgb, var(--ash) 45%, transparent), 30px -30px 0 color-mix(in srgb, var(--ash) 30%, transparent), 36px -36px 0 color-mix(in srgb, var(--ash) 15%, transparent); }
+/* Keep this requested background effect on independently of other motion settings. */
+.pixel-sky .shooting-star { animation: sky-shoot var(--star-duration) var(--star-delay) linear infinite !important; }
+@keyframes sky-shoot {
+    0% { opacity: 0; transform: translate(0, 0); }
+    2% { opacity: .95; }
+    18% { opacity: 0; transform: translate(-320px, 320px); }
+    100% { opacity: 0; transform: translate(-320px, 320px); }
+}
 button, input { font: inherit; }
 svg, img { display: block; max-width: 100%; }
 ::selection { background: var(--tea); color: var(--ink); }
@@ -68,6 +96,7 @@ svg, img { display: block; max-width: 100%; }
 
 @media (max-width: 600px) {
     body::before { height: 220px; opacity: .35; }
+    .sky-moon { top: 166px; opacity: .6; }
 }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
