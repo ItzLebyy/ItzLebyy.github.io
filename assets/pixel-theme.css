@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "Pixelify Sans";
+    src: url("fonts/PixelifySans.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+}
+
+:root {
+    color-scheme: dark;
+    --olive: #818479;
+    --ash: #b5cbb7;
+    --tea: #d2e4c4;
+    --background: #1c2a20;
+    --surface: #2d402d;
+    --section-background: #223325;
+    --text: #edf2e7;
+    --muted: #c0ccb9;
+    --line: #607358;
+    --shadow: #101c15;
+    --ink: #203024;
+    --syntax-pink: #f4a7cf;
+    --syntax-blue: #a9d6f5;
+    --syntax-yellow: #f1d58a;
+    --syntax-purple: #c6b3f4;
+    --syntax-mint: #a9dec0;
+    --pixel: "Pixelify Sans", "Cascadia Code", Consolas, monospace;
+    --mono: "Cascadia Code", Consolas, "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+html { scrollbar-width: none; scroll-padding-top: 28px; }
+html::-webkit-scrollbar { display: none; }
+body {
+    margin: 0;
+    isolation: isolate;
+    background: var(--background) url("pixel-stars.svg") repeat;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 14px;
+    line-height: 1.75;
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: auto 0 0;
+    height: min(30vw, 360px);
+    z-index: -1;
+    background: url("pixel-landscape.svg") center bottom / max(100%, 1200px) auto no-repeat;
+    opacity: .55;
+    pointer-events: none;
+    image-rendering: pixelated;
+}
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+svg, img { display: block; max-width: 100%; }
+::selection { background: var(--tea); color: var(--ink); }
+:focus-visible { outline: 3px solid var(--tea); outline-offset: 5px; }
+.pixel-art { image-rendering: pixelated; }
+/* Pixelify's j is dotless; add a square aligned with its right-hand stem. */
+.dotted-j { position: relative; display: inline-block; line-height: 1; }
+.dotted-j::before { content: ""; position: absolute; left: .334em; top: .2em; width: .1em; height: .1em; background: currentColor; pointer-events: none; }
+.syntax-pink { color: var(--syntax-pink); }
+.syntax-blue { color: var(--syntax-blue); }
+.syntax-yellow { color: var(--syntax-yellow); }
+.syntax-purple { color: var(--syntax-purple); }
+.syntax-mint { color: var(--syntax-mint); }
+
+@media (max-width: 600px) {
+    body::before { height: 220px; opacity: .35; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+}

@@ -1,24 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img" aria-labelledby="title description">
-  <title id="title">Náhled stránky Google Search</title>
-  <desc id="description">Ukázka vyhledávací stránky s logem, vyhledávacím polem a tlačítky.</desc>
-  <rect width="800" height="360" fill="#fff"/>
-  <g font-family="Arial, sans-serif">
-    <text x="690" y="34" fill="#202124" font-size="13">Images</text>
-    <text x="745" y="34" fill="#202124" font-size="13">Advanced</text>
-    <g font-size="76" font-weight="500" letter-spacing="-5">
-      <text x="244" y="166" fill="#4285f4">G</text>
-      <text x="302" y="166" fill="#db4437">o</text>
-      <text x="345" y="166" fill="#f4b400">o</text>
-      <text x="388" y="166" fill="#4285f4">g</text>
-      <text x="433" y="166" fill="#0f9d58">l</text>
-      <text x="453" y="166" fill="#db4437">e</text>
-    </g>
-    <rect x="123" y="194" width="554" height="46" rx="23" fill="#fff" stroke="#dfe1e5" stroke-width="2"/>
-    <circle cx="153" cy="217" r="7" fill="none" stroke="#9aa0a6" stroke-width="2"/>
-    <path d="m158 222 6 6" fill="none" stroke="#9aa0a6" stroke-width="2" stroke-linecap="round"/>
-    <rect x="265" y="261" width="126" height="36" rx="4" fill="#f8f9fa"/>
-    <rect x="405" y="261" width="151" height="36" rx="4" fill="#f8f9fa"/>
-    <text x="281" y="284" fill="#3c4043" font-size="13">Google Search</text>
-    <text x="423" y="284" fill="#3c4043" font-size="13">I'm Feeling Lucky</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img" aria-labelledby="title description" shape-rendering="crispEdges">
+  <title id="title">GoonOnTheGo Search — pixel edition</title>
+  <desc id="description">Náhled vyhledávače v zeleném pixelovém stylu s polem pro hledání a tlačítky.</desc>
+  <path fill="#223325" d="M0 0h800v360H0z"/>
+  <g fill="#b5cbb7" opacity=".18"><path d="M48 65h3v3h-3zM99 278h3v3h-3zM701 109h3v3h-3zM740 302h3v3h-3z"/></g>
+  <g fill="#c0ccb9" font-family="monospace" font-size="12"><text x="627" y="30">Images</text><text x="699" y="30">Advanced</text></g>
+  <path fill="#a9d6f5" d="M211 98h6v6h-6zM217 98h6v6h-6zM223 98h6v6h-6zM205 104h6v6h-6zM229 104h6v6h-6zM205 110h6v6h-6zM205 116h6v6h-6zM217 116h6v6h-6zM223 116h6v6h-6zM229 116h6v6h-6zM205 122h6v6h-6zM229 122h6v6h-6zM205 128h6v6h-6zM229 128h6v6h-6zM211 134h6v6h-6zM217 134h6v6h-6zM223 134h6v6h-6z"/>
+  <path fill="#a9d6f5" d="M247 110h6v6h-6zM253 110h6v6h-6zM259 110h6v6h-6zM241 116h6v6h-6zM265 116h6v6h-6zM241 122h6v6h-6zM265 122h6v6h-6zM241 128h6v6h-6zM265 128h6v6h-6zM247 134h6v6h-6zM253 134h6v6h-6zM259 134h6v6h-6z"/>
+  <path fill="#a9d6f5" d="M283 110h6v6h-6zM289 110h6v6h-6zM295 110h6v6h-6zM277 116h6v6h-6zM301 116h6v6h-6zM277 122h6v6h-6zM301 122h6v6h-6zM277 128h6v6h-6zM301 128h6v6h-6zM283 134h6v6h-6zM289 134h6v6h-6zM295 134h6v6h-6z"/>
+  <path fill="#a9d6f5" d="M313 110h6v6h-6zM319 110h6v6h-6zM325 110h6v6h-6zM331 110h6v6h-6zM313 116h6v6h-6zM337 116h6v6h-6zM313 122h6v6h-6zM337 122h6v6h-6zM313 128h6v6h-6zM337 128h6v6h-6zM313 134h6v6h-6zM337 134h6v6h-6z"/>
+  <path fill="#f4a7cf" d="M355 98h6v6h-6zM361 98h6v6h-6zM367 98h6v6h-6zM349 104h6v6h-6zM373 104h6v6h-6zM349 110h6v6h-6zM373 110h6v6h-6zM349 116h6v6h-6zM373 116h6v6h-6zM349 122h6v6h-6zM373 122h6v6h-6zM349 128h6v6h-6zM373 128h6v6h-6zM355 134h6v6h-6zM361 134h6v6h-6zM367 134h6v6h-6z"/>
+  <path fill="#f4a7cf" d="M385 110h6v6h-6zM391 110h6v6h-6zM397 110h6v6h-6zM403 110h6v6h-6zM385 116h6v6h-6zM409 116h6v6h-6zM385 122h6v6h-6zM409 122h6v6h-6zM385 128h6v6h-6zM409 128h6v6h-6zM385 134h6v6h-6zM409 134h6v6h-6z"/>
+  <path fill="#f1d58a" d="M421 98h6v6h-6zM427 98h6v6h-6zM433 98h6v6h-6zM439 98h6v6h-6zM445 98h6v6h-6zM433 104h6v6h-6zM433 110h6v6h-6zM433 116h6v6h-6zM433 122h6v6h-6zM433 128h6v6h-6zM433 134h6v6h-6z"/>
+  <path fill="#f1d58a" d="M457 98h6v6h-6zM457 104h6v6h-6zM457 110h6v6h-6zM469 110h6v6h-6zM475 110h6v6h-6zM457 116h6v6h-6zM463 116h6v6h-6zM481 116h6v6h-6zM457 122h6v6h-6zM481 122h6v6h-6zM457 128h6v6h-6zM481 128h6v6h-6zM457 134h6v6h-6zM481 134h6v6h-6z"/>
+  <path fill="#f1d58a" d="M499 110h6v6h-6zM505 110h6v6h-6zM511 110h6v6h-6zM493 116h6v6h-6zM517 116h6v6h-6zM493 122h6v6h-6zM499 122h6v6h-6zM505 122h6v6h-6zM511 122h6v6h-6zM517 122h6v6h-6zM493 128h6v6h-6zM499 134h6v6h-6zM505 134h6v6h-6zM511 134h6v6h-6z"/>
+  <path fill="#c6b3f4" d="M535 98h6v6h-6zM541 98h6v6h-6zM547 98h6v6h-6zM529 104h6v6h-6zM553 104h6v6h-6zM529 110h6v6h-6zM529 116h6v6h-6zM541 116h6v6h-6zM547 116h6v6h-6zM553 116h6v6h-6zM529 122h6v6h-6zM553 122h6v6h-6zM529 128h6v6h-6zM553 128h6v6h-6zM535 134h6v6h-6zM541 134h6v6h-6zM547 134h6v6h-6z"/>
+  <path fill="#c6b3f4" d="M571 110h6v6h-6zM577 110h6v6h-6zM583 110h6v6h-6zM565 116h6v6h-6zM589 116h6v6h-6zM565 122h6v6h-6zM589 122h6v6h-6zM565 128h6v6h-6zM589 128h6v6h-6zM571 134h6v6h-6zM577 134h6v6h-6zM583 134h6v6h-6z"/>
+  <path fill="#101c15" d="M120 195h568v48H120z"/>
+  <path fill="#1c2a20" stroke="#607358" stroke-width="2" d="M116 190h568v48H116z"/>
+  <g fill="#b5cbb7"><path d="M135 205h12v3h-12zM132 208h3v9h-3zM147 208h3v9h-3zM135 217h12v3h-12zM147 220h3v3h-3zM150 223h3v3h-3z"/></g>
+  <text x="168" y="220" fill="#c0ccb9" font-family="monospace" font-size="13">Search the web...</text>
+  <path fill="#101c15" d="M205 267h192v38H205zM413 267h190v38H413z"/>
+  <path fill="#d2e4c4" d="M201 263h192v38H201z"/>
+  <path fill="#2d402d" stroke="#607358" stroke-width="2" d="M409 263h190v38H409z"/>
+  <g font-family="monospace" font-size="12"><text x="217" y="287" fill="#203024">GoonOnTheGo Search</text><text x="425" y="287" fill="#edf2e7">I'm Feeling Lucky</text></g>
 </svg>

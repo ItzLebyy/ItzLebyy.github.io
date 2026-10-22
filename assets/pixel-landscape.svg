@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" shape-rendering="crispEdges">
+  <path d="M0 70h16V60h16V48h16V40h20v12h16v12h16v12h24v-9h24V55h20V44h16V33h20V22h16v12h16v12h16v12h20v12h32V60h20V48h16V37h20V27h16v12h16v12h16v12h20v12h24v-9h24V55h16V43h24v77H0Z" fill="#344631"/>
+  <path d="M0 88h24V76h24V64h24v12h24v12h32V76h24V64h24V52h24v12h24v12h24v12h32V76h24V64h24V52h24v12h24v12h24v12h32V76h24V64h32v12h24v44H0Z" fill="#283b2b"/>
+  <g fill="#15291f">
+    <path id="pine" d="M18 42h4v8h4v8h4v8h4v8h-8v8h12v8H6v-8h12v-8h-8v-8h4v-8h4zM18 90h4v20h-4z"/>
+    <use href="#pine" x="28" y="12"/><use href="#pine" x="64" y="-18"/>
+    <use href="#pine" x="104" y="20"/><use href="#pine" x="326" y="6"/>
+    <use href="#pine" x="364" y="-10"/><use href="#pine" x="396" y="12"/>
+    <use href="#pine" x="442" y="-22"/>
+  </g>
+  <path d="M0 112h44v-4h24v4h66v-4h28v4h124v-4h24v4h70v-4h30v4h70v8H0Z" fill="#102219"/>
+  <g fill="#8b9b69"><path d="M132 104h2v4h-2zM130 106h6v2h-6zM326 100h2v4h-2zM324 102h6v2h-6z"/></g>
+  <g fill="#b5cbb7"><path d="M196 112v-4h4v-4h12v4h4v4z"/><path d="M202 112h8v6h-8z" fill="#6b7b54"/><path d="M200 106h2v2h-2zM208 108h2v2h-2z" fill="#e6edce"/></g>
+</svg>

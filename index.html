@@ -3,130 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jednoduché osobní portfolio Vojty.">
-    <title>Vojta | Moje portfolio</title>
+    <meta name="theme-color" content="#1c2a20">
+    <meta name="description" content="Vojtův kousek internetu. Učím se tvořit weby, zajímám se o technologie a tady sdílím svoje pokusy.">
+    <title>Vojta — můj kousek internetu</title>
+    <link rel="icon" type="image/svg+xml" href="assets/vojta-mark.svg">
+    <link rel="stylesheet" href="assets/pixel-theme.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress-fill"></span></div>
+    <a class="skip-link" href="#obsah">Přejít na obsah</a>
     <header class="site-header" id="domu">
         <nav class="nav container" aria-label="Hlavní navigace">
-            <a class="logo" href="#domu">vojta<span>.</span></a>
+            <a class="logo" href="#domu" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" width="34" height="34" alt=""><span><span class="dotted-j">j</span>ta<span class="logo-dot">.</span></span></a>
             <div class="nav-links">
-                <a href="#domu">Domů</a>
                 <a href="#o-mne">O mně</a>
-                <a href="#dovednosti">Dovednosti</a>
-                <a href="#projekty">Projekty</a>
-                <a href="#kontakt">Kontakt</a>
+                <a href="#projekty">Projekty <span class="nav-count">03</span></a>
+                <a href="#dovednosti">Co se učím</a>
             </div>
+            <a class="nav-contact" href="#kontakt">Napiš mi <span aria-hidden="true">↗</span></a>
         </nav>
     </header>
 
-    <main>
+    <main id="obsah">
         <section class="hero container" aria-labelledby="hero-title">
             <div class="hero-copy">
-                <p class="eyebrow"><span class="status-dot"></span> STUDENT A ZAČÍNAJÍCÍ TVŮRCE</p>
-                <h1 id="hero-title">Ahoj, jsem <span>Vojta.</span><br>Vítej na mém portfoliu.</h1>
-                <p class="hero-text">Zajímám se o IT, počítače a nové technologie. Právě se učím tvořit weby a zkouším, co všechno se dá naprogramovat.</p>
-                <a class="button" href="#projekty">Moje projekty <span aria-hidden="true">&darr;</span></a>
+                <p class="eyebrow"><span class="status-dot"></span> MŮJ KOUSEK INTERNETU</p>
+                <h1 id="hero-title">Čau,<br>jsem <span class="name-mark">Vo<span class="dotted-j">j</span>ta</span><span class="hero-period">.</span></h1>
+                <p class="hero-text">Baví mě <span class="syntax-blue">počítače</span>, <span class="syntax-pink">hry</span> a zjišťovat, jak věci fungují. Teď se učím dělat <span class="syntax-yellow">weby</span>. Tohle je jeden z nich.</p>
+                <div class="hero-actions">
+                    <a class="button" href="#projekty">Mrkni na moje projekty <span aria-hidden="true">↘</span></a>
+                    <a class="text-link" href="#o-mne">Něco o mně <span aria-hidden="true">↓</span></a>
+                </div>
+                <p class="hero-footnote"><span aria-hidden="true">↳</span> Pořád se učím. A právě to mě na tom baví.</p>
             </div>
+
             <div class="hero-art" aria-hidden="true">
-                <div class="hero-mark">&lt; / &gt;</div>
-                <span class="hero-caption">učím se něco nového</span>
+                <div class="art-topline"><span>vojta / pokoj</span><span class="window-controls">─ □ ×</span></div>
+                <img class="computer pixel-art" src="assets/pixel-desk.svg" width="512" height="448" alt="">
+                <span class="wip-sticker">WORK IN PROGRESS <span class="terminal-cursor">_</span></span>
+                <div class="art-bottomline"><span>trocha kódu, hodně pokusů</span><span>[ ctrl + s ]</span></div>
             </div>
         </section>
 
-        <section class="section container" id="o-mne" aria-labelledby="about-title">
-            <div class="section-heading">
-                <p class="eyebrow">PÁR SLOV O MNĚ</p>
-                <h2 id="about-title">O mně</h2>
-            </div>
-            <div class="about-layout">
-                <div class="about-photo" role="img" aria-label="Místo pro moji fotografii">
-                    <span>V</span>
-                    <p>Sem můžeš přidat svoji fotku</p>
-                </div>
-                <div class="about-copy">
-                    <h3>Počítače mě baví už dlouho.</h3>
-                    <p>Jsem student a ve volném čase rád hraju hry a zkoumám, jak fungují různé technologie. Zajímá mě programování a taky cybersecurity.</p>
-                    <p>Teď se učím základy HTML a CSS. Zatím zkouším jednoduché stránky a postupně se učím, jak je udělat přehledné a hezké.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-tint" id="dovednosti" aria-labelledby="skills-title">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">CO SE UČÍM</p>
-                    <h2 id="skills-title">Dovednosti a zájmy</h2>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill"><span class="skill-number">01</span><h3>HTML</h3><p>Základy tvorby webových stránek</p></div>
-                    <div class="skill"><span class="skill-number">02</span><h3>CSS</h3><p>Zkouším upravovat vzhled stránek</p></div>
-                    <div class="skill"><span class="skill-number">03</span><h3>JavaScript</h3><p>Zatím jen úplné základy</p></div>
-                    <div class="skill"><span class="skill-number">04</span><h3>Práce s PC</h3><p>Každodenní práce a objevování</p></div>
-                    <div class="skill"><span class="skill-number">05</span><h3>Cybersecurity</h3><p>Zájem o bezpečnost na internetu</p></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section container" id="projekty" aria-labelledby="projects-title">
+        <section class="section container projects-section" id="projekty" aria-labelledby="projects-title">
             <div class="section-heading project-heading">
-                <div>
-                    <p class="eyebrow">MALÉ VĚCI, KTERÉ JSEM VYTVOŘIL</p>
-                    <h2 id="projects-title">Moje projekty</h2>
-                </div>
-                <p class="heading-note">Ukázky, které budu postupně doplňovat.</p>
+                <div><p class="eyebrow">01 / CO JSEM ZKUSIL</p><h2 id="projects-title">Moje malé <span class="accent-word">projekty.</span></h2></div>
+                <p class="heading-note">Žádná velká věda.<br>Jen věci, na kterých se učím.</p>
             </div>
             <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-image image-one" aria-hidden="true"><span>01</span></div>
-                    <div class="project-info"><p class="project-type">PRVNÍ POKUS</p><h3>Moje první webová stránka</h3><p>Jednoduchá stránka, na které jsem si vyzkoušel HTML.</p><div class="tags"><span>HTML</span><span>CSS</span></div></div>
-                </article>
-                <article class="project-card">
-                    <div class="project-image image-two" aria-hidden="true"><span>02</span></div>
-                    <div class="project-info"><p class="project-type">O MNĚ</p><h3>About Me stránka</h3><p>Krátké představení a pár věcí, které mě baví.</p><div class="tags"><span>HTML</span><span>CSS</span></div></div>
-                </article>
-                <a class="project-card" href="projects/googlesearch/index.html" aria-label="Otevřít projekt Google Search">
-                    <div class="project-image image-google"><img src="projects/googlesearch/preview.svg" alt="Náhled stránky Google Search"></div>
-                    <div class="project-info"><p class="project-type">VYHLEDÁVÁNÍ</p><h3>Google Search</h3><p>Vlastní stránka inspirovaná vyhledávačem Google.</p><div class="tags"><span>HTML</span><span>CSS</span></div><span class="project-link">Otevřít projekt &rarr;</span></div>
+                <a class="project-card project-featured" href="projects/googlesearch/index.html">
+                    <div class="project-image image-google">
+                        <div class="mini-browser-bar" aria-hidden="true"><span>● ● ●</span><span>GoonOnTheGo / můj pokus</span><span>↗</span></div>
+                        <img src="projects/googlesearch/preview.svg" alt="Náhled mého vyhledávače GoonOnTheGo" width="800" height="360" loading="lazy">
+                        <span class="preview-label">KLIKNI A VYZKOUŠEJ ↗</span>
+                    </div>
+                    <div class="project-info"><div><p class="project-type">01 / VYHLEDÁVÁNÍ</p><h3><span class="syntax-blue">Goon</span><span class="syntax-pink">On</span><span class="syntax-yellow">The</span><span class="syntax-purple">Go</span> Search</h3><p>Můj pokus o známý vyhledávač. Včetně obrázků a rozšířeného hledání.</p><div class="tags"><span class="syntax-pink">HTML</span><span class="syntax-blue">CSS</span></div></div><span class="project-arrow" aria-hidden="true">↗</span></div>
                 </a>
+                <div class="project-stack">
+                    <a class="project-card project-small" href="#domu">
+                        <div class="small-project-art first-web" aria-hidden="true"><img class="pixel-art" src="assets/pixel-terminal.svg" width="72" height="63" alt=""><span class="art-label">hello, world.</span></div>
+                        <div class="project-info"><div><p class="project-type">02 / PRVNÍ POKUS</p><h3>Moje první stránka</h3><p>Tady to začalo. HTML, CSS a spousta zkoušení.</p><div class="tags"><span class="syntax-pink">HTML</span><span class="syntax-blue">CSS</span><span>Tento web</span></div></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+                    </a>
+                    <a class="project-card project-small" href="#o-mne">
+                        <div class="small-project-art about-art" aria-hidden="true"><img class="pixel-art" src="assets/pixel-gamepad.svg" width="80" height="60" alt=""><span class="art-label">a little about me</span></div>
+                        <div class="project-info"><div><p class="project-type">03 / NĚCO OSOBNÍHO</p><h3>About me</h3><p>Pár slov o mně a o tom, co mě baví.</p><div class="tags"><span class="syntax-pink">HTML</span><span>Součást portfolia</span></div></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="about-section" id="o-mne" aria-labelledby="about-title">
+            <div class="container about-layout">
+                <div class="about-copy"><p class="eyebrow">02 / ZA TÍM WEBEM</p><h2 id="about-title">Prostě kluk,<br>kterého baví <span class="accent-word">IT.</span></h2><p>Jsem Vojta, student, který rád hraje hry a zkoumá, jak fungují počítače. Když mě něco zaujme, chci si to vyzkoušet sám.</p><p>Teď objevuju <span class="syntax-pink">HTML</span> a <span class="syntax-blue">CSS</span>, trochu <span class="syntax-yellow">JavaScriptu</span> a zajímá mě i <span class="syntax-purple">cybersecurity</span>. Občas se něco rozbije. Pak hledám proč. I to k tomu patří.</p><div class="about-signature"><span aria-hidden="true">&gt;_</span> Vo<span class="dotted-j">j</span>ta</div></div>
+                <div class="learning-panel" id="dovednosti" role="region" aria-labelledby="skills-title">
+                    <div class="learning-header"><p class="eyebrow">PRÁVĚ OTEVŘENÉ ZÁLOŽKY</p><span aria-hidden="true">↙</span></div>
+                    <h3 id="skills-title">Co se teď učím</h3>
+                    <ul class="skills-list">
+                        <li><span class="skill-symbol" aria-hidden="true">&lt;/&gt;</span><div><h4><span class="syntax-pink">HTML</span> &amp; <span class="syntax-blue">CSS</span></h4><p>Od první značky po vlastní vzhled.</p></div><span class="skill-state">zkouším</span></li>
+                        <li><span class="skill-symbol" aria-hidden="true">{ }</span><div><h4 class="syntax-yellow">JavaScript</h4><p>Aby se na stránce i něco dělo.</p></div><span class="skill-state">začínám</span></li>
+                        <li><span class="skill-symbol" aria-hidden="true">⌘</span><div><h4 class="syntax-blue">Počítače &amp; technologie</h4><p>Každý den něco nového.</p></div><span class="skill-state">baví mě</span></li>
+                        <li><span class="skill-symbol" aria-hidden="true">#</span><div><h4 class="syntax-purple">Cybersecurity</h4><p>Jak zůstat v bezpečí na internetu.</p></div><span class="skill-state">objevuju</span></li>
+                    </ul>
+                    <p class="learning-note"><span aria-hidden="true">✳</span> Nemusím umět všechno. Stačí mít chuť začít.</p>
+                </div>
             </div>
         </section>
 
-        <section class="contact-section" id="kontakt" aria-labelledby="contact-title">
-            <div class="container contact-layout">
-                <div>
-                    <p class="eyebrow">NAPIŠ MI</p>
-                    <h2 id="contact-title">Kontakt</h2>
-                    <p class="contact-intro">Máš otázku nebo si chceš popovídat o technologiích? Tady mě najdeš.</p>
+        <section class="contact-section container" id="kontakt" aria-labelledby="contact-title">
+            <div class="contact-card">
+                <div class="contact-copy">
+                    <p class="eyebrow">03 / TAK ZASE NĚKDY?</p>
+                    <h2 id="contact-title">Dáme <span class="accent-word">řeč?</span> <span aria-hidden="true">↗</span></h2>
+                    <p>O hrách, počítačích nebo čemkoliv kolem webů.</p>
                 </div>
                 <div class="contact-links">
-                    <div class="contact-row"><span>E-mail</span><strong>doplním</strong><span class="contact-hint">e-mailová adresa</span></div>
-                    <div class="contact-row"><span>Discord</span><strong>doplním</strong><span class="contact-hint">uživatelské jméno</span></div>
+                    <div class="contact-row"><span>Personální email</span><button class="contact-value" type="button" data-copy="vojtabedan14@gmail.com" aria-label="Zkopírovat personální email: vojtabedan14@gmail.com"><span>vojtabedan14@gmail.com</span><span class="copy-icon" aria-hidden="true">⧉</span></button></div>
+                    <div class="contact-row"><span>Školní email</span><button class="contact-value" type="button" data-copy="D26455@oa-opava.cz" aria-label="Zkopírovat školní email: D26455@oa-opava.cz"><span>D26455@oa-opava.cz</span><span class="copy-icon" aria-hidden="true">⧉</span></button></div>
+                    <div class="contact-row"><span>Discord</span><button class="contact-value" type="button" data-copy="vgkez" aria-label="Zkopírovat Discord: vgkez"><span>vgkez</span><span class="copy-icon" aria-hidden="true">⧉</span></button></div>
+                    <p class="copy-status" id="copy-status" role="status" aria-atomic="true">Kliknutím zkopíruješ kontakt.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <a class="logo" href="#domu">vojta<span>.</span></a>
-            <p>© 2026 Vojta | Školní portfolio</p>
-            <div class="footer-meta">
-                <div class="validation-links" role="group" aria-label="Validátory kódu">
-                    <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fitzlebyy.github.io%2F" target="_blank" rel="noopener noreferrer" aria-label="Otevřít validátor HTML">
-                        <span class="validation-icon" aria-hidden="true">&#10003;</span> HTML
-                    </a>
-                    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fitzlebyy.github.io%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank" rel="noopener noreferrer" aria-label="Otevřít validátor CSS">
-                        <span class="validation-icon" aria-hidden="true">&#10003;</span> CSS
-                    </a>
-                </div>
-                <div class="ai-citation">
-                    <a href="CITACE-AI.md">Citace AI</a>
-                </div>
-            </div>
-            <a class="back-top" href="#domu">Zpět nahoru ↑</a>
-        </div>
+    <footer class="footer container">
+        <div class="footer-main"><a class="logo" href="#domu" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" width="34" height="34" alt=""><span><span class="dotted-j">j</span>ta<span class="logo-dot">.</span></span></a><p>Vytvořeno z nadšení. A pár pokusů navíc.</p><a class="back-top" href="#domu">Zpátky nahoru ↑</a></div>
+        <div class="footer-bottom"><p>© 2026 Vojta · Školní portfolio</p><div class="footer-meta"><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fitzlebyy.github.io%2F" target="_blank" rel="noopener noreferrer" aria-label="Otevřít validátor HTML">HTML ↗</a><a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fitzlebyy.github.io%2F&amp;profile=css3svg&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en" target="_blank" rel="noopener noreferrer" aria-label="Otevřít validátor CSS">CSS ↗</a><a href="CITACE-AI.md">Citace AI ↗</a></div><div class="palette" role="img" aria-label="Barevná paleta: šedá olivová, popelavá šedá a čajová zelená"><span></span><span></span><span></span></div></div>
     </footer>
+    <script>
+        // Ease the progress bar toward the current scroll position.
+        (() => {
+            const root = document.documentElement;
+            const fill = document.querySelector(".scroll-progress-fill");
+            let frame = null;
+            let targetProgress = 0;
+            let displayedProgress = 0;
+            let lastTime = 0;
+
+            function updateProgress() {
+                const scrollableHeight = root.scrollHeight - root.clientHeight;
+                targetProgress = scrollableHeight > 0
+                    ? Math.max(0, Math.min(1, window.scrollY / scrollableHeight))
+                    : 0;
+                if (frame === null && displayedProgress !== targetProgress) {
+                    lastTime = performance.now();
+                    frame = window.requestAnimationFrame(animateProgress);
+                }
+            }
+
+            function animateProgress(now) {
+                const elapsed = now - lastTime;
+                lastTime = now;
+                // Time-based easing stays consistent at different display refresh rates.
+                displayedProgress += (targetProgress - displayedProgress) * (1 - Math.exp(-elapsed / 90));
+                const settled = Math.abs(targetProgress - displayedProgress) < 0.0001;
+                if (settled) displayedProgress = targetProgress;
+                fill.style.transform = "scaleX(" + displayedProgress + ")";
+                frame = settled ? null : window.requestAnimationFrame(animateProgress);
+            }
+
+            window.addEventListener("scroll", updateProgress, { passive: true });
+            window.addEventListener("resize", updateProgress);
+            window.addEventListener("pageshow", updateProgress);
+            window.addEventListener("load", updateProgress, { once: true });
+            if ("ResizeObserver" in window) {
+                new ResizeObserver(updateProgress).observe(document.body);
+            }
+            updateProgress();
+        })();
+
+        // Give every same-page anchor link the same slower scroll.
+        (() => {
+            const root = document.documentElement;
+            let animationFrame = null;
+            let previousScrollBehavior = "";
+
+            function stopScroll() {
+                if (animationFrame === null) return;
+                window.cancelAnimationFrame(animationFrame);
+                animationFrame = null;
+                root.style.scrollBehavior = previousScrollBehavior;
+            }
+
+            document.querySelectorAll('a[href^="#"]').forEach((link) => {
+                link.addEventListener("click", (event) => {
+                    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+
+                    const target = document.getElementById(link.hash.slice(1));
+                    if (!target) return;
+
+                    stopScroll();
+                    event.preventDefault();
+
+                    const startY = window.scrollY;
+                    const padding = parseFloat(getComputedStyle(root).scrollPaddingTop) || 0;
+                    const margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+                    const maxY = Math.max(0, root.scrollHeight - window.innerHeight);
+                    const targetY = Math.max(0, Math.min(maxY, startY + target.getBoundingClientRect().top - padding - margin));
+                    const startTime = performance.now();
+                    const duration = 1800;
+
+                    previousScrollBehavior = root.style.scrollBehavior;
+                    root.style.scrollBehavior = "auto";
+
+                    function animate(now) {
+                        const progress = Math.min(1, (now - startTime) / duration);
+                        const eased = progress < 0.5
+                            ? 4 * progress ** 3
+                            : 1 - (-2 * progress + 2) ** 3 / 2;
+
+                        window.scrollTo(0, startY + (targetY - startY) * eased);
+
+                        if (progress < 1) {
+                            animationFrame = window.requestAnimationFrame(animate);
+                            return;
+                        }
+
+                        stopScroll();
+                        if (window.location.hash !== link.hash) {
+                            window.history.pushState(null, "", link.hash);
+                        }
+                        // Move keyboard focus with the section, without another scroll.
+                        const hadTabindex = target.hasAttribute("tabindex");
+                        if (!hadTabindex) target.setAttribute("tabindex", "-1");
+                        target.focus({ preventScroll: true });
+                        if (!hadTabindex) target.removeAttribute("tabindex");
+                    }
+
+                    animationFrame = window.requestAnimationFrame(animate);
+                });
+            });
+
+            // Let visitors interrupt the animation by scrolling or interacting.
+            window.addEventListener("wheel", stopScroll, { passive: true });
+            window.addEventListener("touchstart", stopScroll, { passive: true });
+            window.addEventListener("pointerdown", stopScroll, { passive: true });
+            window.addEventListener("popstate", stopScroll);
+            window.addEventListener("keydown", (event) => {
+                if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " ", "Escape", "Tab"].includes(event.key)) {
+                    stopScroll();
+                }
+            });
+        })();
+
+        // Copy contact details, including in local previews without Clipboard API access.
+        (() => {
+            const status = document.getElementById("copy-status");
+            const hint = status.textContent;
+            let statusTimer;
+
+            async function copyText(text) {
+                if (navigator.clipboard && window.isSecureContext) {
+                    try {
+                        await navigator.clipboard.writeText(text);
+                        return;
+                    } catch {
+                        // Try the selection-based fallback if clipboard access is blocked.
+                    }
+                }
+
+                const previousFocus = document.activeElement;
+                const field = document.createElement("textarea");
+                field.value = text;
+                field.readOnly = true;
+                field.style.cssText = "position:fixed;top:0;left:0;opacity:0;pointer-events:none;";
+                document.body.appendChild(field);
+                try {
+                    field.focus({ preventScroll: true });
+                    field.select();
+                    field.setSelectionRange(0, text.length);
+                    if (!document.execCommand("copy")) throw new Error("Copy failed");
+                } finally {
+                    field.remove();
+                    if (previousFocus) previousFocus.focus({ preventScroll: true });
+                }
+            }
+
+            document.querySelectorAll("[data-copy]").forEach((button) => {
+                const icon = button.querySelector(".copy-icon");
+                let iconTimer;
+                button.addEventListener("click", async () => {
+                    window.clearTimeout(statusTimer);
+                    window.clearTimeout(iconTimer);
+                    try {
+                        await copyText(button.dataset.copy);
+                        icon.textContent = "✓";
+                        status.textContent = "Zkopírováno do schránky.";
+                        iconTimer = window.setTimeout(() => { icon.textContent = "⧉"; }, 2200);
+                        statusTimer = window.setTimeout(() => { status.textContent = hint; }, 2200);
+                    } catch {
+                        icon.textContent = "⧉";
+                        status.textContent = "Kopírování se nepovedlo. Kontakt označ a zkopíruj ručně.";
+                    }
+                });
+            });
+        })();
+    </script>
 </body>
 </html>

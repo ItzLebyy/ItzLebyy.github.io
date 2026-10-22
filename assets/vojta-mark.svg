@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" shape-rendering="crispEdges">
+  <title>Vojta's little coding robot</title>
+  <path d="M30 7h4v10h-4z" fill="#b5cbb7"/>
+  <rect x="28" y="3" width="8" height="7" fill="#d2e4c4"/>
+  <path d="M5 28h8v15H5zM51 28h8v15h-8z" fill="#818479"/>
+  <path d="M18 16h28v4h7v30h-7v5H18v-5h-7V20h7z" fill="#172117"/>
+  <path d="M18 13h28v5h6v29h-6v5H18v-5h-6V18h6z" fill="#d2e4c4"/>
+  <path d="M18 17h28v3h3v25h-3v4H18v-4h-3V20h3z" fill="#b5cbb7"/>
+  <rect x="18" y="22" width="28" height="22" fill="#29352b"/>
+  <path d="M23 27h4v4h4v4h-4v4h-4v-4h4v-4h-4zM35 35h7v3h-7z" fill="#d2e4c4"/>
+  <path d="M24 48h10" stroke="#818479" stroke-width="2"/>
+  <path d="M40 48h2" stroke="#29352b" stroke-width="2"/>
+</svg>

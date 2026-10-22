@@ -4,26 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Search</title>
+    <title>GoonOnTheGo Search</title>
+    <meta name="theme-color" content="#1c2a20">
+    <link rel="icon" type="image/svg+xml" href="../../assets/vojta-mark.svg">
+    <link rel="stylesheet" href="../../assets/pixel-theme.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
+    <nav aria-label="Project navigation">
+        <a class="portfolio-return" href="../../index.html#projekty">← vo<span class="dotted-j">j</span>ta / portfolio</a>
         <a href="images.html">Images</a>
         <a href="advanced.html">Advanced Search</a>
     </nav>
 
     <main class="search-page">
-        <h1 class="logo" aria-label="Google">
-            <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
-        </h1>
+        <h1 class="logo" aria-label="GoonOnTheGo"><span class="blue">Goon</span><span class="red">On</span><span class="yellow">The</span><span class="green">Go</span></h1>
 
         <form action="https://www.google.com/search" method="GET">
-            <input class="search-box" type="text"
+            <input class="search-box" placeholder="Search the web..." type="text"
                    name="q" aria-label="Search" required>
 
             <div class="buttons">
-                <button type="submit">Google Search</button>
+                <button type="submit">GoonOnTheGo Search</button>
                 <button type="submit" name="btnI" value="1"
                         formnovalidate>
                     I'm Feeling Lucky
@@ -32,6 +34,6 @@
         </form>
     </main>
 
-    <a class="ai-citation" href="../../CITACE-AI.md">Citace AI a použité prompty</a>
+    <a class="ai-citation" href="../../CITACE-AI.md">Citace použití AI</a>
 </body>
 </html>

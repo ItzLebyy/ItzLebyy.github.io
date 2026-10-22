@@ -4,27 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Images</title>
+    <title>GoonOnTheGo Images</title>
+    <meta name="theme-color" content="#1c2a20">
+    <link rel="icon" type="image/svg+xml" href="../../assets/vojta-mark.svg">
+    <link rel="stylesheet" href="../../assets/pixel-theme.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Google Search</a>
+    <nav aria-label="Project navigation">
+        <a class="portfolio-return" href="../../index.html#projekty">← vo<span class="dotted-j">j</span>ta / portfolio</a>
+        <a href="index.html">GoonOnTheGo Search</a>
     </nav>
 
     <main class="search-page">
-        <h1 class="logo">Google <span class="images-label">Images</span></h1>
+        <h1 class="logo" aria-label="GoonOnTheGo Images"><span class="blue">Goon</span><span class="red">On</span><span class="yellow">The</span><span class="green">Go</span><span class="images-label">Images</span></h1>
 
         <form action="https://www.google.com/search" method="GET">
             <input type="hidden" name="udm" value="2">
 
             <input class="search-box" type="text"
-                   name="q" aria-label="Image search" required>
+                   name="q" aria-label="Image search" placeholder="Search images..." required>
 
             <div class="buttons">
                 <button type="submit">Search Images</button>
             </div>
         </form>
     </main>
+    <a class="ai-citation" href="../../CITACE-AI.md">Citace použití AI ↗</a>
 </body>
 </html>
