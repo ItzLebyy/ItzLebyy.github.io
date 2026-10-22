@@ -10,4 +10,4 @@ Pravidla blackjacku a Snake jsou oddělena v `core.js`, ovládání a vykreslov�
 
 Blackjack rozdává karty postupně z balíčku a dealer otočí skrytou kartu před dobráním. Během rozdávání jsou akce zamčené; při omezeném pohybu se místo letu a otáčení používá jemné prolínání.
 
-Přepínač barev vpravo nahoře mění lesní a noční paletu včetně ilustrací a pamatuje si výběr. Sdílená překvapení jsou v `../../assets/eastereggs.js`. Párty při omezeném pohybu zobrazí neanimovanou verzi s barevnými pixely a nápisem. Klávesa Escape zavře objevená překvapení.
+Přepínač barev vpravo nahoře mění lesní a noční paletu včetně ilustrací a pamatuje si výběr. Sdílená překvapení jsou v `../../assets/eastereggs.js`. Párty spustí krátkou animaci barevných pixelů s nápisem. Klávesa Escape zavře objevená překvapení.

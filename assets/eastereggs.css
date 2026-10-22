@@ -37,10 +37,16 @@
 .secret-toast strong { display: block; margin-bottom: 5px; color: var(--syntax-yellow); font: 500 20px/1.3 var(--pixel); }
 .secret-toast button { padding: 1px 5px; border: 0; background: none; color: var(--muted); font: 18px var(--mono); cursor: pointer; }
 .pixel-party { position: fixed; z-index: 240; inset: 0; overflow: hidden; pointer-events: none; }
-.pixel-confetti { position: absolute; top: -12px; left: var(--confetti-x); width: 7px; height: 7px; background: var(--confetti-color); pointer-events: none; animation: pixel-fall var(--confetti-duration) linear forwards; }
+.pixel-party .pixel-confetti { position: absolute; width: 6px; height: 10px; background: var(--confetti-color); pointer-events: none; }
+.party-cannon { position: absolute; z-index: 2; bottom: 8px; left: 12px; width: clamp(76px, 10vw, 118px); aspect-ratio: 48 / 56; transform-origin: 30% 85%; filter: drop-shadow(4px 4px 0 var(--shadow)); }
+.party-cannon-right { left: auto; right: 12px; transform-origin: 70% 85%; }
+.cannon-sleeve { position: relative; width: 100%; height: 100%; }
+.party-cannon-right .cannon-sleeve { transform: scaleX(-1); }
+.cannon-sleeve svg { width: 100%; height: 100%; }
+.cannon-mouth { position: absolute; left: 70.8%; top: 28.6%; }
+.cannon-flash { position: absolute; width: 28px; height: 28px; background: var(--syntax-yellow); clip-path: polygon(35% 0, 65% 0, 65% 25%, 100% 25%, 100% 65%, 70% 65%, 70% 100%, 30% 100%, 30% 70%, 0 70%, 0 35%, 35% 35%); pointer-events: none; }
+.secret-toast.party-toast { top: 20px; bottom: auto; }
 .party-title { position: absolute; top: 26%; left: 50%; transform: translateX(-50%); width: max-content; max-width: calc(100% - 40px); padding: 15px 22px; border: 3px solid var(--syntax-pink); background: var(--background); box-shadow: 7px 7px 0 var(--shadow); color: var(--syntax-yellow); font: 600 clamp(26px, 6vw, 56px)/1.3 var(--pixel); text-align: center; }
-.pixel-party.is-still .pixel-confetti { top: var(--confetti-y); animation: none; }
-@keyframes pixel-fall { to { transform: translate(var(--confetti-drift), 110vh) rotate(360deg); } }
 .secret-buddy { position: fixed; z-index: 230; bottom: 23px; left: 20px; display: flex; flex-direction: column; align-items: flex-start; max-width: 220px; }
 .buddy-speech { padding: 9px 12px; margin: 0 0 10px; border: 2px solid var(--line); background: var(--background); color: var(--text); box-shadow: 3px 3px 0 var(--shadow); font: 10px/1.7 var(--mono); }
 .buddy-hello { padding: 0; border: 0; background: none; cursor: pointer; animation: robot-bob 1.6s steps(2, end) infinite; }

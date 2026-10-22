@@ -98,25 +98,105 @@
         box.append(content, close); document.body.appendChild(box);
         toastTimer = window.setTimeout(() => box.remove(), 6500);
     }
+    let cancelParty = () => {};
     function confetti() {
-        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        document.querySelectorAll(".pixel-party").forEach(element => element.remove());
+        cancelParty();
         const layer = document.createElement("div"); layer.className = "pixel-party"; layer.setAttribute("aria-hidden", "true");
-        layer.classList.toggle("is-still", reducedMotion);
         document.body.appendChild(layer);
         const title = document.createElement("div"); title.className = "party-title"; title.textContent = "PIXEL PARTY!";
         layer.appendChild(title);
         const colors = ["var(--syntax-pink)", "var(--syntax-blue)", "var(--syntax-yellow)", "var(--syntax-purple)", "var(--syntax-mint)"];
-        for (let i = 0; i < 36; i++) {
-            const pixel = document.createElement("span"); pixel.className = "pixel-confetti"; pixel.setAttribute("aria-hidden", "true");
-            pixel.style.setProperty("--confetti-x", Math.random() * 100 + "vw");
-            pixel.style.setProperty("--confetti-y", 8 + Math.random() * 84 + "vh");
-            pixel.style.setProperty("--confetti-color", colors[i % colors.length]);
-            pixel.style.setProperty("--confetti-duration", 1.4 + Math.random() * 1.3 + "s");
-            pixel.style.setProperty("--confetti-drift", Math.round(Math.random() * 160 - 80) + "px");
-            layer.appendChild(pixel);
+        const animations = new Set();
+        const timers = new Map();
+        let cancelled = false;
+        const dispose = () => {
+            if (cancelled) return;
+            cancelled = true;
+            timers.forEach((resolve, id) => { window.clearTimeout(id); resolve(false); }); timers.clear();
+            animations.forEach(animation => animation.cancel()); animations.clear();
+            layer.remove();
+            if (cancelParty === dispose) cancelParty = () => {};
+        };
+        cancelParty = dispose;
+        const wait = delay => new Promise(resolve => {
+            if (cancelled) { resolve(false); return; }
+            const id = window.setTimeout(() => { timers.delete(id); resolve(true); }, delay);
+            timers.set(id, resolve);
+        });
+        const play = (element, frames, options) => {
+            if (cancelled) return Promise.resolve(false);
+            const animation = element.animate(frames, options);
+            animations.add(animation);
+            return animation.finished.then(() => true, () => false).finally(() => animations.delete(animation));
+        };
+        const cannons = ["left", "right"].map(side => {
+            const cannon = document.createElement("div"); cannon.className = "party-cannon party-cannon-" + side;
+            cannon.innerHTML = `<div class="cannon-sleeve"><svg viewBox="0 0 48 56" shape-rendering="crispEdges" aria-hidden="true">
+                <path fill="var(--shadow)" d="M5 55 9 39 16 23 24 8h7l16 11v7L30 39 12 55z"/>
+                <path fill="var(--syntax-purple)" d="M8 52 26 12 41 23 11 52z"/>
+                <path fill="var(--syntax-pink)" d="m19 27 5-11 13 10-8 8zM10 47l4-9 10 1-10 10z"/>
+                <path fill="var(--syntax-yellow)" d="m15 35 3-7 14 3-5 6z"/>
+                <path fill="var(--tea)" d="M25 8h6l14 11v5l-5 2-16-12z"/>
+                <path fill="var(--ink)" d="m29 11 12 9-2 3-12-9z"/>
+                <path fill="var(--text)" d="M25 9h4l-2 4h-3z"/>
+                </svg><span class="cannon-mouth"></span></div>`;
+            layer.append(cannon); return cannon;
+        });
+        function fire(cannon, wave) {
+            const direction = cannon.classList.contains("party-cannon-left") ? 1 : -1;
+            const mouth = cannon.querySelector(".cannon-mouth").getBoundingClientRect();
+            const bounds = layer.getBoundingClientRect();
+            const x = mouth.x - bounds.x, y = mouth.y - bounds.y;
+            play(cannon, [
+                { transform: "translate(0, 0) rotate(0)" },
+                { transform: `translate(${-direction * 10}px, 12px) rotate(${-direction * 10}deg)`, offset: .28 },
+                { transform: "translate(0, 0) rotate(0)" }
+            ], { duration: 300, easing: "ease-out" });
+            const flash = document.createElement("span"); flash.className = "cannon-flash";
+            flash.style.left = x + "px"; flash.style.top = y + "px"; layer.append(flash);
+            play(flash, [{ transform: "translate(-50%, -50%) scale(.5)", opacity: 1 }, { transform: "translate(-50%, -50%) scale(1.7)", opacity: 0 }], { duration: 180 }).then(() => flash.remove());
+            for (let i = 0; i < 16; i++) {
+                const pixel = document.createElement("span"); pixel.className = "pixel-confetti";
+                pixel.style.left = x - 3 + "px"; pixel.style.top = y - 3 + "px";
+                pixel.style.setProperty("--confetti-color", colors[(i + wave) % colors.length]);
+                pixel.style.height = i % 3 === 0 ? "6px" : "10px";
+                layer.append(pixel);
+                const distance = direction * (60 + Math.random() * Math.min(bounds.width * .68, 650));
+                const height = Math.min(bounds.height * .8, 740) * (.7 + Math.random() * .5);
+                const drop = bounds.height - y + 60;
+                const spin = (Math.random() - .5) * 1000;
+                const frames = Array.from({ length: 21 }, (_, step) => {
+                    const time = step / 20;
+                    return { offset: time, transform: `translate(${distance * time}px, ${-4 * height * time * (1 - time) + drop * time * time}px) rotate(${spin * time}deg)`, opacity: time < .8 ? 1 : (1 - time) / .2 };
+                });
+                play(pixel, frames, { duration: 1900 + Math.random() * 550, easing: "linear" }).then(() => pixel.remove());
+            }
         }
-        window.setTimeout(() => layer.remove(), 3200);
+        async function runParty() {
+            layer.dataset.phase = "entering";
+            const entered = await Promise.all(cannons.map((cannon, index) => play(cannon, [
+                { transform: `translateY(150%) rotate(${index ? 15 : -15}deg)` },
+                { transform: "translateY(-5px) rotate(0deg)", offset: .8 },
+                { transform: "translateY(0) rotate(0deg)" }
+            ], { duration: 480, easing: "cubic-bezier(.2,.7,.3,1)" })));
+            if (cancelled || entered.includes(false)) return;
+            layer.dataset.phase = "firing";
+            for (let wave = 0; wave < 3; wave++) {
+                cannons.forEach(cannon => fire(cannon, wave));
+                if (wave < 2 && !await wait(420)) return;
+            }
+            layer.dataset.phase = "settling";
+            if (!await wait(2500)) return;
+            layer.dataset.phase = "leaving";
+            await Promise.all([
+                ...cannons.map((cannon, index) => play(cannon, [
+                    { transform: "translateY(0) rotate(0deg)" },
+                    { transform: `translateY(150%) rotate(${index ? 15 : -15}deg)` }
+                ], { duration: 480, easing: "cubic-bezier(.5,0,.8,.4)" })),
+                play(title, [{ opacity: 1 }, { opacity: 0 }], { duration: 350 })
+            ]);
+        }
+        runParty().then(dispose, dispose);
     }
     function toggleRobot() {
         remember("robot");
@@ -156,7 +236,7 @@
         if (event.key === "Escape") {
             document.querySelector(".secret-toast")?.remove();
             document.querySelector(".secret-buddy")?.remove();
-            document.querySelectorAll(".pixel-party").forEach(element => element.remove());
+            cancelParty();
             return;
         }
         if (event.defaultPrevented || event.isComposing || event.repeat || event.ctrlKey || event.metaKey || event.altKey || event.target.closest('input, textarea, [contenteditable]:not([contenteditable="false"])')) { letters = ""; return; }
@@ -169,6 +249,7 @@
         if (letters.endsWith("party")) {
             letters = ""; remember("party"); confetti();
             toast("TAJEMSTVÍ ODEMČENO / PIXEL PARTY", "Někdy je potřeba oslavit i jeden malý pixel.");
+            document.querySelector(".secret-toast")?.classList.add("party-toast");
         }
     });
     updateCount();
