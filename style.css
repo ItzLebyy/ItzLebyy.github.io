@@ -521,6 +521,10 @@ h2 {
     border-color: currentColor;
 }
 
+.project-wide {
+    grid-column: 1 / -1;
+}
+
 .project-stack {
     display: grid;
     gap: 24px;

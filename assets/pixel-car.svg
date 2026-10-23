@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 24" shape-rendering="crispEdges">
+  <title>Pixel car</title>
+  <path fill="#101c15" d="M1 17h38v3H1z"/>
+  <path fill="#607358" d="M9 6h16v2h4v3h5v2h4v6H2v-7h4V9h3z"/>
+  <path fill="#d2e4c4" d="M10 7h14v2h4v3h6v2h3v3H3v-4h4v-3h3z"/>
+  <path fill="#243728" d="M12 9h5v3h-7v-2h2zM19 9h4v1h3v2h-7z"/>
+  <path fill="#a9d6f5" d="M12 9h5v1h-5zM19 9h4v1h-4z"/>
+  <path fill="#b5cbb7" d="M4 14h31v1H4zM19 13h4v1h-4z"/>
+  <path fill="#f1d58a" d="M33 13h3v2h-3z"/>
+  <path fill="#f4a7cf" d="M3 13h2v2H3z"/>
+  <path fill="#101c15" d="M7 15h6v6H7zM27 15h6v6h-6z"/>
+  <path fill="#818479" d="M9 17h2v2H9zM29 17h2v2h-2z"/>
+</svg>

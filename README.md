@@ -7,8 +7,8 @@
 <p align="center">Osobní a školní portfolio v pixelovém stylu. Trocha kódu, hodně pokusů.</p>
 
 <p align="center">
-  <a href="https://itzlebyy.github.io/">Otevřít web</a> ·
-  <a href="https://itzlebyy.github.io/citace.html">Citace AI</a>
+  <a href="https://vojtechbedan.github.io/">Otevřít web</a> ·
+  <a href="https://vojtechbedan.github.io/citace.html">Citace AI</a>
 </p>
 
 <p align="center">
@@ -55,6 +55,6 @@ Web neobsahuje JavaScript, hernu ani skrytá překvapení. Navigace používá b
 
 ## Vznik a podklady
 
-Současnou podobu portfolia vytvořil **OpenAI Codex** podle zadání a průběžné zpětné vazby autora. Ilustrace pokoje vznikla pomocí nástroje OpenAI pro generování obrázků. Rozsah práce AI a role autora jsou popsané v [citaci použití AI](CITACE-AI.md), která má i [čtenářskou verzi na webu](https://itzlebyy.github.io/citace.html).
+Současnou podobu portfolia vytvořil **OpenAI Codex** podle zadání a průběžné zpětné vazby autora. Ilustrace pokoje vznikla pomocí nástroje OpenAI pro generování obrázků. Rozsah práce AI a role autora jsou popsané v [citaci použití AI](CITACE-AI.md), která má i [čtenářskou verzi na webu](https://vojtechbedan.github.io/citace.html).
 
 Pixelové nadpisy používají **Pixelify Sans** od Stefie Justprince pod licencí SIL Open Font License 1.1. Podrobnosti najdeš v [dokumentaci podkladů](assets/README.md) a [licenčním textu písma](assets/fonts/OFL-PixelifySans.txt).
