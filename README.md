@@ -8,7 +8,6 @@
 
 <p align="center">
   <a href="https://itzlebyy.github.io/">Otevřít web</a> ·
-  <a href="https://itzlebyy.github.io/projects/arcade/">Pixelová herna</a> ·
   <a href="https://itzlebyy.github.io/citace.html">Citace AI</a>
 </p>
 
@@ -18,14 +17,12 @@
 
 ## Co tu najdeš
 
-- **Portfolio:** představení, projekty, co se učím a kontakty, které zkopíruješ kliknutím.
-- **Pixelový svět:** vlastní grafika, lesní a noční paleta, měsíc a padající hvězdy.
-- **Plynulá navigace:** posouvání mezi sekcemi a ukazatel průběhu čtení.
+- **Portfolio:** představení, projekty, co se učím a kontakty s přímými e-mailovými odkazy.
+- **Pixelový svět:** vlastní grafika, lesní paleta, měsíc a padající hvězdy.
+- **Plynulá navigace:** běžné odkazy mezi sekcemi s plynulým posouváním pomocí CSS.
 - **GoonOnTheGo Search:** projekt inspirovaný vyhledávačem Google, včetně obrázků a rozšířeného hledání.
-- **Malá herna:** blackjack s rozdáváním karet, Snake a test postřehu.
-- **Skrytá překvapení:** pár věcí objevíš až při hraní a zkoušení.
 
-Web je responzivní a používá **HTML, CSS a JavaScript** bez frameworků a bez sestavování. Písmo i grafické podklady jsou uložené přímo v repozitáři.
+Web je responzivní a používá **HTML a CSS** bez frameworků a bez sestavování. Písmo i grafické podklady jsou uložené přímo v repozitáři.
 
 ## Spuštění lokálně
 
@@ -45,18 +42,16 @@ Příkaz spusť v kořenové složce projektu a otevři [localhost:8000](http://
 ├── style.css                  # rozvržení hlavní stránky
 ├── citace.html                # čitelná citace AI na webu
 ├── CITACE-AI.md                # citace ve formátu Markdown
-├── assets/                    # sdílené styly, grafika, písmo a interakce
-│   ├── pixel-theme.css        # palety, pixelový vzhled a pozadí
-│   ├── eastereggs.js          # přepínač barev a skrytá překvapení
+├── assets/                    # sdílené styly, grafika a písmo
+│   ├── pixel-theme.css        # pixelový vzhled a animované pozadí
 │   └── document.css           # vzhled dokumentace na webu
 └── projects/
-    ├── arcade/                # blackjack, Snake a postřeh
     └── googlesearch/          # GoonOnTheGo Search
 ```
 
-## Ukládání výsledků
+## Bez skriptů
 
-Rekordy her, nalezená překvapení a vybraná barevná paleta se ukládají pomocí `localStorage` jen do aktuálního prohlížeče. Projekt nemá backend, účty ani databázi výsledků. Pokud je ukládání zablokované, hry fungují dál bez trvalého uložení.
+Web neobsahuje JavaScript, hernu ani skrytá překvapení. Navigace používá běžné odkazy, vyhledávání formuláře v HTML a kontakty odkazy `mailto:`. Detaily dokumentace se otevírají nativním prvkem `<details>`. Měsíc a padající hvězdy jsou vytvořené v HTML a CSS. Projekt nepoužívá `localStorage`, backend, účty ani databázi.
 
 ## Vznik a podklady
 

@@ -8,14 +8,21 @@
     <title>Grafické podklady | Vojta</title>
     <link rel="icon" href="assets/vojta-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/pixel-theme.css">
-    <link rel="stylesheet" href="assets/eastereggs.css">
     <link rel="stylesheet" href="assets/document.css">
-    <script src="assets/eastereggs.js" defer></script>
 </head>
 <body>
+    <div class="pixel-sky" aria-hidden="true">
+        <span class="sky-moon"></span>
+        <span class="shooting-star" style="--star-left:35%;--star-top:3%;--star-duration:9s;--star-delay:-.4s"></span>
+        <span class="shooting-star" style="--star-left:72%;--star-top:10%;--star-duration:9s;--star-delay:-1.9s"></span>
+        <span class="shooting-star" style="--star-left:98%;--star-top:28%;--star-duration:9s;--star-delay:-3.4s"></span>
+        <span class="shooting-star" style="--star-left:46%;--star-top:35%;--star-duration:9s;--star-delay:-4.9s"></span>
+        <span class="shooting-star" style="--star-left:83%;--star-top:2%;--star-duration:9s;--star-delay:-6.4s"></span>
+        <span class="shooting-star" style="--star-left:26%;--star-top:46%;--star-duration:9s;--star-delay:-7.9s"></span>
+    </div>
     <a class="doc-skip" href="#dokument">Přejít na dokument</a>
     <nav class="document-nav docs-width" aria-label="Navigace dokumentace">
-        <a class="doc-logo" href="index.html" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" data-secret-src="assets/vojta-mark-night.svg" width="32" height="32" alt=""><span><span class="dotted-j">j</span>ta<span class="syntax-pink">.</span></span></a>
+        <a class="doc-logo" href="index.html" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" width="32" height="32" alt=""><span><span class="dotted-j">j</span>ta<span class="syntax-pink">.</span></span></a>
         <a class="doc-back" href="citace.html#pismo">← Citace AI</a>
     </nav>
     <main class="docs-width" id="dokument">
@@ -25,7 +32,7 @@
                 <p>Na této stránce</p>
                 <a href="#pokoj">Ilustrace pokoje</a>
                 <a href="#grafika">Pixelová grafika</a>
-                <a href="#palety">Barevné varianty</a>
+                <a href="#barvy">Barvy a formáty</a>
                 <a href="#pismo">Písmo a licence</a>
             </nav>
             <div class="document-window">
@@ -37,16 +44,16 @@
                     <h2 id="pokoj">Ilustrace pokoje</h2>
                     <p>Obrázek pokoje vznikl pomocí vestavěného nástroje OpenAI pro generování obrázků podle pixelové reference dodané autorem. Byl upraven pro portfolio: codingový stůl, noční okno, rostliny a spící kočka.</p>
                     <figure class="doc-illustration"><img src="assets/pixel-room.webp" width="1341" height="1173" loading="lazy" alt="Pixelový pokoj s počítačem, knihovnou, rostlinami a spící kočkou u nočního okna"><figcaption>Ilustrace používaná na hlavní stránce · pixel-room.webp</figcaption></figure>
-                    <p>Soubor je uložen přímo v projektu ve formátu WebP. Noční barevná varianta používá CSS filtr.</p>
+                    <p>Soubor je uložen přímo v projektu ve formátu WebP a zobrazuje se bez skriptů.</p>
                     <details class="doc-details">
                         <summary>Zobrazit původní zadání pro generování obrázku</summary>
                         <p lang="en">Edit the provided pixel-art bedroom reference into a new original, polished hero illustration for Vojta's personal coding portfolio. Preserve the intimate, straight-on bedroom composition, crisp hand-placed 16-bit pixels, cozy nighttime mood, forest green and sage palette, and high amount of small environmental detail, but redesign the actual objects and arrangement so it is a personalized variation. Output ONLY the room illustration, no surrounding browser/window frame, no title bar, no outer border, no website layout, no captions. Landscape aspect ratio 8:7, edge to edge artwork. Central coding desk with cream CRT-style monitor showing abstract colored syntax lines (pastel blue, purple, pink, warm yellow), compact keyboard, mouse, a dark green ergonomic chair turned toward the screen, PC tower with three subtle lilac horizontal light bars. Left wall tall bookshelf with varied books, small storage drawers and trailing ivy; a little space poster with ringed planet. Right upper wall a large window with half-open blinds, a crescent moon, distant pine trees and tiny warm window lights at night. Beneath the window a cozy narrow bed with green plaid blanket and a small sleeping black-and-white cat, no floating text. Add a desk lamp casting a soft warm yellow pool of light, a cream mug with a tiny abstract code symbol, a small potted plant and pen cup, a few pinned notes with no readable text, a subtle pixel digital clock reading 23:47, and a leafy foreground plant in the lower right. Make it beautifully finished and readable at 500px wide. Keep the lighting intentional: deep forest shadows (#15251b, #1c2a20), medium green wall/wood surfaces (#2d402d), sage highlights (#b5cbb7), cream light (#d2e4c4). Slight warm illuminated details and restrained candy-colored syntax on the monitor. Visually distinct redesigned furniture and details from the reference, no logos, no watermark, no human characters, no title text, no UI. Crisp square pixel clusters, limited color ramps, subtle deliberate dithering; no smooth vectors, no photorealism, no blurry painterly textures, no neon or gradients.</p>
                     </details>
                     <h2 id="grafika">Pixelová grafika</h2>
-                    <p>Lesní krajina, statické hvězdy, terminál, herní ovladač, karty a robotické logo byly vytvořeny pro toto portfolio jako SVG. Tréninková střelnice a její terč mají také vlastní pixelové SVG podklady.</p>
+                    <p>Lesní krajina, statické hvězdy, terminál, herní ovladač a robotické logo byly vytvořeny pro toto portfolio jako SVG.</p>
                     <p>Grafika používá celočíselné souřadnice a ostré hrany, aby si při zvětšení zachovala pixelový vzhled. Měsíc a padající hvězdy v pozadí stránky jsou vytvořené v CSS.</p>
-                    <h2 id="palety">Barevné varianty</h2>
-                    <p>SVG soubory s příponou <code>-night.svg</code> zachovávají stejné tvary s barvami pro noční paletu. Přepínač vpravo nahoře mění barvy rozhraní i ilustrací a pamatuje si výběr v prohlížeči.</p>
+                    <h2 id="barvy">Barvy a formáty</h2>
+                    <p>Web používá tmavou lesní paletu, světlý text a pastelové akcenty definované v CSS. SVG podklady a WebP ilustrace jsou uložené lokálně; měsíc a animované hvězdy tvoří běžné HTML prvky se styly CSS.</p>
                     <h2 id="pismo">Písmo a licence</h2>
                     <p>Pixelové nadpisy používají <strong>Pixelify Sans</strong> od Stefie Justprince. Písmo je uloženo lokálně jako <code>assets/fonts/PixelifySans.ttf</code> a je distribuováno beze změn pod licencí SIL Open Font License 1.1.</p>
                     <p lang="en">Copyright 2021 The Pixelify Sans Project Authors.</p>

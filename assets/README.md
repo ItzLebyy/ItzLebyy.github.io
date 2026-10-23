@@ -1,8 +1,8 @@
 # Pixel assets
 
-The SVG forest landscape, star pattern, terminal, gamepad, playing cards and robot mark were created for this portfolio. They use integer coordinates and crisp edges. The homepage room illustration (`pixel-room.webp`) was generated with OpenAI's image-generation tool from the supplied pixel-bedroom reference, adapted with a coding desk, night window, plants and sleeping cat. Its night-palette colors use a CSS filter.
+The SVG forest landscape, star pattern, terminal, gamepad and robot mark were created for this portfolio. They use integer coordinates and crisp edges. The homepage room illustration (`pixel-room.webp`) was generated with OpenAI's image-generation tool from the supplied pixel-bedroom reference, adapted with a coding desk, night window, plants and sleeping cat.
 
-The `-night.svg` variants keep the same pixel geometry with colors for the night palette. The top-right color switch changes both the CSS palette and illustrations. The shared script remembers the selection across pages when browser storage is available.
+The site uses a fixed forest-green CSS palette. The moon and moving stars use static HTML markup and CSS animations; no JavaScript is required.
 
 <details>
 <summary>Room artwork: built-in image-generation prompt</summary>

@@ -8,14 +8,21 @@
     <title>Citace použití AI | Vojta</title>
     <link rel="icon" href="assets/vojta-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/pixel-theme.css">
-    <link rel="stylesheet" href="assets/eastereggs.css">
     <link rel="stylesheet" href="assets/document.css">
-    <script src="assets/eastereggs.js" defer></script>
 </head>
 <body>
+    <div class="pixel-sky" aria-hidden="true">
+        <span class="sky-moon"></span>
+        <span class="shooting-star" style="--star-left:35%;--star-top:3%;--star-duration:9s;--star-delay:-.4s"></span>
+        <span class="shooting-star" style="--star-left:72%;--star-top:10%;--star-duration:9s;--star-delay:-1.9s"></span>
+        <span class="shooting-star" style="--star-left:98%;--star-top:28%;--star-duration:9s;--star-delay:-3.4s"></span>
+        <span class="shooting-star" style="--star-left:46%;--star-top:35%;--star-duration:9s;--star-delay:-4.9s"></span>
+        <span class="shooting-star" style="--star-left:83%;--star-top:2%;--star-duration:9s;--star-delay:-6.4s"></span>
+        <span class="shooting-star" style="--star-left:26%;--star-top:46%;--star-duration:9s;--star-delay:-7.9s"></span>
+    </div>
     <a class="doc-skip" href="#dokument">Přejít na dokument</a>
     <nav class="document-nav docs-width" aria-label="Navigace dokumentace">
-        <a class="doc-logo" href="index.html" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" data-secret-src="assets/vojta-mark-night.svg" width="32" height="32" alt=""><span><span class="dotted-j">j</span>ta<span class="syntax-pink">.</span></span></a>
+        <a class="doc-logo" href="index.html" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" width="32" height="32" alt=""><span><span class="dotted-j">j</span>ta<span class="syntax-pink">.</span></span></a>
         <a class="doc-back" href="index.html">← Portfolio</a>
     </nav>
     <main class="docs-width" id="dokument">
@@ -41,19 +48,17 @@
                     <p>Pro novou ilustraci pokoje byl použit také vestavěný nástroj OpenAI pro generování obrázků. Ilustrace vznikla podle obrazové reference dodané autorem.</p>
 
                     <h2 id="podil-ai">Podíl AI na tvorbě webu</h2>
-                    <p>Současnou podobu portfolia vytvořil Codex podle zadání a průběžné zpětné vazby autora. AI připravila strukturu hlavní stránky, její texty, grafické prvky, styly a interaktivní funkce. Úpravy prováděla přímo v souborech projektu.</p>
+                    <p>Současnou statickou podobu portfolia vytvořil Codex podle zadání a průběžné zpětné vazby autora. AI připravila strukturu hlavní stránky, její texty, grafické prvky, styly a navigaci v HTML a CSS. Úpravy prováděla přímo v souborech projektu.</p>
                     <p>Při práci se vycházelo z existujícího portfolia a již přidaného projektu GoonOnTheGo Search. Codex přepracoval hlavní stránku a zachoval propojení s tímto projektem.</p>
 
                     <h2 id="rozsah">Rozsah práce AI</h2>
                     <ul>
                         <li><strong>HTML a obsah:</strong> rozvržení hlavní stránky a české texty sekcí s představením, projekty, dovednostmi a kontakty.</li>
-                        <li><strong>CSS a vzhled:</strong> tmavá zelená a noční paleta, světlý text, rozvržení pro počítače i mobily a úpravy vzhledu podle připomínek autora.</li>
+                        <li><strong>CSS a vzhled:</strong> tmavá zelená paleta, světlý text, rozvržení pro počítače i mobily a úpravy vzhledu podle připomínek autora.</li>
                         <li><strong>Grafika:</strong> pixelová ilustrace pokoje, lesní krajina, hvězdy a měsíc, ikony, robotické logo nahrazující písmeno „o“ ve jméně Vojta a ikona webu pro kartu prohlížeče. Ilustrace pokoje je generovaný rastrový obrázek; ostatní pixelové podklady jsou vytvořené v SVG nebo CSS.</li>
-                        <li><strong>Navigace:</strong> plynulé posouvání ke všem odkazovaným částem stránky a možnost animaci přerušit vlastním ovládáním.</li>
-                        <li><strong>Kontakty:</strong> zobrazení údajů dodaných autorem, kopírování e-mailových adres a Discord jména po kliknutí a potvrzení výsledku kopírování.</li>
-                        <li><strong>Průběh čtení:</strong> horní ukazatel posunutí stránky s plynulým pohybem a skrytí výchozího posuvníku.</li>
+                        <li><strong>Navigace:</strong> běžné odkazy mezi stránkami a sekcemi, plynulé posouvání pomocí CSS a vyhledávací formuláře v HTML.</li>
+                        <li><strong>Kontakty:</strong> zobrazení údajů dodaných autorem, přímé e-mailové odkazy a označitelný text Discord jména.</li>
                         <li><strong>Projekty:</strong> prezentace projektů a odkaz na existující stránku GoonOnTheGo Search včetně jejího náhledu.</li>
-                        <li><strong>Herna:</strong> blackjack s animací rozdávání karet, Snake, test postřehu a skrytý Headshot Trainer. Pravidla, ovládání, ukládání rekordů v prohlížeči a další interaktivní překvapení.</li>
                         <li><strong>Dokumentace:</strong> příprava této citace, její čitelné podoby na webu a README pro GitHub.</li>
                     </ul>
 

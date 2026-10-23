@@ -8,21 +8,26 @@
     <title>Vojta — můj kousek internetu</title>
     <link rel="icon" type="image/svg+xml" href="assets/vojta-mark.svg">
     <link rel="stylesheet" href="assets/pixel-theme.css">
-    <link rel="stylesheet" href="assets/eastereggs.css">
-    <script src="assets/eastereggs.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress-fill"></span></div>
+    <div class="pixel-sky" aria-hidden="true">
+        <span class="sky-moon"></span>
+        <span class="shooting-star" style="--star-left:35%;--star-top:3%;--star-duration:9s;--star-delay:-.4s"></span>
+        <span class="shooting-star" style="--star-left:72%;--star-top:10%;--star-duration:9s;--star-delay:-1.9s"></span>
+        <span class="shooting-star" style="--star-left:98%;--star-top:28%;--star-duration:9s;--star-delay:-3.4s"></span>
+        <span class="shooting-star" style="--star-left:46%;--star-top:35%;--star-duration:9s;--star-delay:-4.9s"></span>
+        <span class="shooting-star" style="--star-left:83%;--star-top:2%;--star-duration:9s;--star-delay:-6.4s"></span>
+        <span class="shooting-star" style="--star-left:26%;--star-top:46%;--star-duration:9s;--star-delay:-7.9s"></span>
+    </div>
     <a class="skip-link" href="#obsah">Přejít na obsah</a>
     <header class="site-header" id="domu">
         <nav class="nav container" aria-label="Hlavní navigace">
-            <a class="logo" href="#domu" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" data-secret-src="assets/vojta-mark-night.svg" width="34" height="34" alt=""><span><span class="dotted-j">j</span>ta<span class="logo-dot">.</span></span></a>
+            <a class="logo" href="#domu" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" width="34" height="34" alt=""><span><span class="dotted-j">j</span>ta<span class="logo-dot">.</span></span></a>
             <div class="nav-links">
                 <a href="#o-mne">O mně</a>
                 <a href="#projekty">Projekty <span class="nav-count">03</span></a>
                 <a href="#dovednosti">Co se učím</a>
-                <a href="#herna">Herna</a>
             </div>
             <a class="nav-contact" href="#kontakt">Napiš mi <span aria-hidden="true">↗</span></a>
         </nav>
@@ -54,36 +59,24 @@
                 <p class="heading-note">Žádná velká věda.<br>Jen věci, na kterých se učím.</p>
             </div>
             <div class="projects-grid">
-                <a class="project-card project-featured" href="projects/googlesearch/index.html">
+                <a class="project-card project-featured" href="https://vojtechbedan.github.io/googlesearch/">
                     <div class="project-image image-google">
                         <div class="mini-browser-bar" aria-hidden="true"><span>● ● ●</span><span>GoonOnTheGo / můj pokus</span><span>↗</span></div>
-                        <img src="projects/googlesearch/preview.svg" data-secret-src="projects/googlesearch/preview-night.svg" alt="Náhled mého vyhledávače GoonOnTheGo" width="800" height="360" loading="lazy">
+                        <img src="projects/googlesearch/preview.svg" alt="Náhled mého vyhledávače GoonOnTheGo" width="800" height="360" loading="lazy">
                         <span class="preview-label">KLIKNI A VYZKOUŠEJ ↗</span>
                     </div>
                     <div class="project-info"><div><p class="project-type">01 / VYHLEDÁVÁNÍ</p><h3><span class="syntax-blue">Goon</span><span class="syntax-pink">On</span><span class="syntax-yellow">The</span><span class="syntax-purple">Go</span> Search</h3><p>Můj pokus o známý vyhledávač. Včetně obrázků a rozšířeného hledání.</p><div class="tags"><span class="syntax-pink">HTML</span><span class="syntax-blue">CSS</span></div></div><span class="project-arrow" aria-hidden="true">↗</span></div>
                 </a>
                 <div class="project-stack">
                     <a class="project-card project-small" href="#domu">
-                        <div class="small-project-art first-web" aria-hidden="true"><img class="pixel-art" src="assets/pixel-terminal.svg" data-secret-src="assets/pixel-terminal-night.svg" width="72" height="63" alt=""><span class="art-label">hello, world.</span></div>
+                        <div class="small-project-art first-web" aria-hidden="true"><img class="pixel-art" src="assets/pixel-terminal.svg" width="72" height="63" alt=""><span class="art-label">hello, world.</span></div>
                         <div class="project-info"><div><p class="project-type">02 / PRVNÍ POKUS</p><h3>Moje první stránka</h3><p>Tady to začalo. HTML, CSS a spousta zkoušení.</p><div class="tags"><span class="syntax-pink">HTML</span><span class="syntax-blue">CSS</span><span>Tento web</span></div></div><span class="project-arrow" aria-hidden="true">↗</span></div>
                     </a>
                     <a class="project-card project-small" href="#o-mne">
-                        <div class="small-project-art about-art" aria-hidden="true"><img class="pixel-art" src="assets/pixel-gamepad.svg" data-secret-src="assets/pixel-gamepad-night.svg" width="80" height="60" alt=""><span class="art-label">a little about me</span></div>
+                        <div class="small-project-art about-art" aria-hidden="true"><img class="pixel-art" src="assets/pixel-gamepad.svg" width="80" height="60" alt=""><span class="art-label">a little about me</span></div>
                         <div class="project-info"><div><p class="project-type">03 / NĚCO OSOBNÍHO</p><h3>About me</h3><p>Pár slov o mně a o tom, co mě baví.</p><div class="tags"><span class="syntax-pink">HTML</span><span>Součást portfolia</span></div></div><span class="project-arrow" aria-hidden="true">↗</span></div>
                     </a>
                 </div>
-            </div>
-        </section>
-        <section class="arcade-teaser container" id="herna" aria-labelledby="arcade-title">
-            <div class="arcade-invite">
-                <img class="pixel-art arcade-invite-art" src="assets/pixel-cards.svg" data-secret-src="assets/pixel-cards-night.svg" width="96" height="72" alt="">
-                <div class="arcade-invite-copy">
-                    <p class="eyebrow">BONUS / PAUZA OD KÓDU</p>
-                    <h2 id="arcade-title">Ještě jeden <span class="syntax-pink">pokus?</span></h2>
-                    <p>Malá herna pro chvíle, kdy si kód zaslouží pauzu.</p>
-                    <div class="arcade-shortcuts"><a href="projects/arcade/index.html#blackjack">♠ Blackjack</a><a href="projects/arcade/index.html#snake">▰ Snake</a><a href="projects/arcade/index.html#reaction">ϟ Postřeh</a></div>
-                </div>
-                <a class="button" href="projects/arcade/index.html">Otevřít hernu <span aria-hidden="true">↗</span></a>
             </div>
         </section>
 
@@ -112,188 +105,18 @@
                     <p>O hrách, počítačích nebo čemkoliv kolem webů.</p>
                 </div>
                 <div class="contact-links">
-                    <div class="contact-row"><span>Personální email</span><button class="contact-value" type="button" data-copy="vojtabedan14@gmail.com" aria-label="Zkopírovat personální email: vojtabedan14@gmail.com"><span>vojtabedan14@gmail.com</span><span class="copy-icon" aria-hidden="true">⧉</span></button></div>
-                    <div class="contact-row"><span>Školní email</span><button class="contact-value" type="button" data-copy="D26455@oa-opava.cz" aria-label="Zkopírovat školní email: D26455@oa-opava.cz"><span>D26455@oa-opava.cz</span><span class="copy-icon" aria-hidden="true">⧉</span></button></div>
-                    <div class="contact-row"><span>Discord</span><button class="contact-value" type="button" data-copy="vgkez" aria-label="Zkopírovat Discord: vgkez"><span>vgkez</span><span class="copy-icon" aria-hidden="true">⧉</span></button></div>
-                    <p class="copy-status" id="copy-status" role="status" aria-atomic="true">Kliknutím zkopíruješ kontakt.</p>
+                    <div class="contact-row"><span>Personální email</span><div class="contact-actions"><span class="contact-value" title="Kliknutím označíš celý kontakt">vojtabedan14@gmail.com</span><a class="contact-mail" href="mailto:vojtabedan14@gmail.com" aria-label="Napsat na personální email: vojtabedan14@gmail.com" title="Napsat email"><span aria-hidden="true">✉</span></a></div></div>
+                    <div class="contact-row"><span>Školní email</span><div class="contact-actions"><span class="contact-value" title="Kliknutím označíš celý kontakt">D26455@oa-opava.cz</span><a class="contact-mail" href="mailto:D26455@oa-opava.cz" aria-label="Napsat na školní email: D26455@oa-opava.cz" title="Napsat email"><span aria-hidden="true">✉</span></a></div></div>
+                    <div class="contact-row"><span>Discord</span><span class="contact-value" title="Kliknutím označíš celý kontakt">vgkez</span></div>
+                    <p class="contact-copy-note">Klikni na údaj a stiskni <kbd>Ctrl</kbd> + <kbd>C</kbd> (na Macu <kbd>⌘</kbd> + <kbd>C</kbd>). Na mobilu text podrž.</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer container">
-        <div class="footer-main"><a class="logo" href="#domu" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" data-secret-src="assets/vojta-mark-night.svg" width="34" height="34" alt=""><span><span class="dotted-j">j</span>ta<span class="logo-dot">.</span></span></a><p>Vytvořeno z nadšení. A pár pokusů navíc.</p><a class="back-top" href="#domu">Zpátky nahoru ↑</a></div>
+        <div class="footer-main"><a class="logo" href="#domu" aria-label="Vojta — domů"><span>v</span><img class="logo-mark" src="assets/vojta-mark.svg" width="34" height="34" alt=""><span><span class="dotted-j">j</span>ta<span class="logo-dot">.</span></span></a><p>Vytvořeno z nadšení. A pár pokusů navíc.</p><a class="back-top" href="#domu">Zpátky nahoru ↑</a></div>
         <div class="footer-bottom"><p>© 2026 Vojta · Školní portfolio</p><div class="footer-meta"><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fitzlebyy.github.io%2F" target="_blank" rel="noopener noreferrer" aria-label="Otevřít validátor HTML">HTML ↗</a><a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fitzlebyy.github.io%2F&amp;profile=css3svg&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en" target="_blank" rel="noopener noreferrer" aria-label="Otevřít validátor CSS">CSS ↗</a><a href="citace.html">Citace AI ↗</a></div><div class="palette" role="img" aria-label="Barevná paleta: šedá olivová, popelavá šedá a čajová zelená"><span></span><span></span><span></span></div></div>
     </footer>
-    <script>
-        // Ease the progress bar toward the current scroll position.
-        (() => {
-            const root = document.documentElement;
-            const fill = document.querySelector(".scroll-progress-fill");
-            let frame = null;
-            let targetProgress = 0;
-            let displayedProgress = 0;
-            let lastTime = 0;
-
-            function updateProgress() {
-                const scrollableHeight = root.scrollHeight - root.clientHeight;
-                targetProgress = scrollableHeight > 0
-                    ? Math.max(0, Math.min(1, window.scrollY / scrollableHeight))
-                    : 0;
-                if (frame === null && displayedProgress !== targetProgress) {
-                    lastTime = performance.now();
-                    frame = window.requestAnimationFrame(animateProgress);
-                }
-            }
-
-            function animateProgress(now) {
-                const elapsed = now - lastTime;
-                lastTime = now;
-                // Time-based easing stays consistent at different display refresh rates.
-                displayedProgress += (targetProgress - displayedProgress) * (1 - Math.exp(-elapsed / 90));
-                const settled = Math.abs(targetProgress - displayedProgress) < 0.0001;
-                if (settled) displayedProgress = targetProgress;
-                fill.style.transform = "scaleX(" + displayedProgress + ")";
-                frame = settled ? null : window.requestAnimationFrame(animateProgress);
-            }
-
-            window.addEventListener("scroll", updateProgress, { passive: true });
-            window.addEventListener("resize", updateProgress);
-            window.addEventListener("pageshow", updateProgress);
-            window.addEventListener("load", updateProgress, { once: true });
-            if ("ResizeObserver" in window) {
-                new ResizeObserver(updateProgress).observe(document.body);
-            }
-            updateProgress();
-        })();
-
-        // Give every same-page anchor link the same slower scroll.
-        (() => {
-            const root = document.documentElement;
-            let animationFrame = null;
-            let previousScrollBehavior = "";
-
-            function stopScroll() {
-                if (animationFrame === null) return;
-                window.cancelAnimationFrame(animationFrame);
-                animationFrame = null;
-                root.style.scrollBehavior = previousScrollBehavior;
-            }
-
-            document.querySelectorAll('a[href^="#"]').forEach((link) => {
-                link.addEventListener("click", (event) => {
-                    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-
-                    const target = document.getElementById(link.hash.slice(1));
-                    if (!target) return;
-
-                    stopScroll();
-                    event.preventDefault();
-
-                    const startY = window.scrollY;
-                    const padding = parseFloat(getComputedStyle(root).scrollPaddingTop) || 0;
-                    const margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
-                    const maxY = Math.max(0, root.scrollHeight - window.innerHeight);
-                    const targetY = Math.max(0, Math.min(maxY, startY + target.getBoundingClientRect().top - padding - margin));
-                    const startTime = performance.now();
-                    const duration = 1800;
-
-                    previousScrollBehavior = root.style.scrollBehavior;
-                    root.style.scrollBehavior = "auto";
-
-                    function animate(now) {
-                        const progress = Math.min(1, (now - startTime) / duration);
-                        const eased = progress < 0.5
-                            ? 4 * progress ** 3
-                            : 1 - (-2 * progress + 2) ** 3 / 2;
-
-                        window.scrollTo(0, startY + (targetY - startY) * eased);
-
-                        if (progress < 1) {
-                            animationFrame = window.requestAnimationFrame(animate);
-                            return;
-                        }
-
-                        stopScroll();
-                        if (window.location.hash !== link.hash) {
-                            window.history.pushState(null, "", link.hash);
-                        }
-                        // Move keyboard focus with the section, without another scroll.
-                        const hadTabindex = target.hasAttribute("tabindex");
-                        if (!hadTabindex) target.setAttribute("tabindex", "-1");
-                        target.focus({ preventScroll: true });
-                        if (!hadTabindex) target.removeAttribute("tabindex");
-                    }
-
-                    animationFrame = window.requestAnimationFrame(animate);
-                });
-            });
-
-            // Let visitors interrupt the animation by scrolling or interacting.
-            window.addEventListener("wheel", stopScroll, { passive: true });
-            window.addEventListener("touchstart", stopScroll, { passive: true });
-            window.addEventListener("pointerdown", stopScroll, { passive: true });
-            window.addEventListener("popstate", stopScroll);
-            window.addEventListener("vojta:gameopen", stopScroll);
-            window.addEventListener("keydown", (event) => {
-                if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " ", "Escape", "Tab"].includes(event.key)) {
-                    stopScroll();
-                }
-            });
-        })();
-
-        // Copy contact details, including in local previews without Clipboard API access.
-        (() => {
-            const status = document.getElementById("copy-status");
-            const hint = status.textContent;
-            let statusTimer;
-
-            async function copyText(text) {
-                if (navigator.clipboard && window.isSecureContext) {
-                    try {
-                        await navigator.clipboard.writeText(text);
-                        return;
-                    } catch {
-                        // Try the selection-based fallback if clipboard access is blocked.
-                    }
-                }
-
-                const previousFocus = document.activeElement;
-                const field = document.createElement("textarea");
-                field.value = text;
-                field.readOnly = true;
-                field.style.cssText = "position:fixed;top:0;left:0;opacity:0;pointer-events:none;";
-                document.body.appendChild(field);
-                try {
-                    field.focus({ preventScroll: true });
-                    field.select();
-                    field.setSelectionRange(0, text.length);
-                    if (!document.execCommand("copy")) throw new Error("Copy failed");
-                } finally {
-                    field.remove();
-                    if (previousFocus) previousFocus.focus({ preventScroll: true });
-                }
-            }
-
-            document.querySelectorAll("[data-copy]").forEach((button) => {
-                const icon = button.querySelector(".copy-icon");
-                let iconTimer;
-                button.addEventListener("click", async () => {
-                    window.clearTimeout(statusTimer);
-                    window.clearTimeout(iconTimer);
-                    try {
-                        await copyText(button.dataset.copy);
-                        icon.textContent = "✓";
-                        status.textContent = "Zkopírováno do schránky.";
-                        iconTimer = window.setTimeout(() => { icon.textContent = "⧉"; }, 2200);
-                        statusTimer = window.setTimeout(() => { status.textContent = hint; }, 2200);
-                    } catch {
-                        icon.textContent = "⧉";
-                        status.textContent = "Kopírování se nepovedlo. Kontakt označ a zkopíruj ručně.";
-                    }
-                });
-            });
-        })();
-    </script>
 </body>
 </html>
